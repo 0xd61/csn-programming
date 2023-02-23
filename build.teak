@@ -10,7 +10,7 @@ void Start() {
     str baseDir = PathGetDefaultPrefix();
     str outputDir = "out";
     str lang = "de_DE.UTF-8";
-    str baseCommand = "docker run --rm -v %baseDir%:/home/marp/app -e LANG=%lang%";
+    str baseCommand = "docker run --rm -it -v %baseDir%:/home/marp/app -e LANG=%lang%";
     str container = "marpteam/marp-cli";
     str system = SystemGetHostName();
     str user = "";
