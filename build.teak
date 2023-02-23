@@ -8,7 +8,7 @@ void Start() {
     PathSetDefaultPrefixToScriptSourceDirectory();
 
     str baseDir = PathGetDefaultPrefix();
-    str outputDir = "out";
+    str outputDir = "docs";
     str lang = "de_DE.UTF-8";
     str baseCommand = "docker run --rm -it -v %baseDir%:/home/marp/app -e LANG=%lang%";
     str container = "marpteam/marp-cli";
