@@ -1,0 +1,36 @@
+#!/usr/bin/env teak
+
+str type #option;
+str mode  #option;
+str file #option;
+
+void Start() {
+    PathSetDefaultPrefixToScriptSourceDirectory();
+
+    str baseDir = PathGetDefaultPrefix();
+    str outputDir = "out";
+    str lang = "de_DE.UTF-8";
+    str baseCommand = "docker run --rm -v %baseDir%:/home/marp/app -e LANG=%lang%";
+    str container = "marpteam/marp-cli";
+    str system = SystemGetHostName();
+    str user = "";
+
+    if (system == "Linux") {
+        user = "-e MARP_USER=\"$(id -u):$(id -g)\"";
+    }
+
+    if (file == "") {
+        file = "slide-deck.md";
+    }
+
+    PathCreateDirectory("%baseDir%/%outputDir%");
+    
+    Log("Building slides");
+    if (mode == "") {
+       assert SystemShellExecute("%baseCommand% %user% %container% %type% -I . -o %outputDir%");
+    } else if (mode == "server") {
+        assert SystemShellExecute("%baseCommand% %user% -p 8080:8080 -p 37717:37717 %container% %type% -I . -o %outputDir% -s .");
+    } else if (mode == "watch") {
+       assert SystemShellExecute("%baseCommand% %user% %container% %type% -I . -o %outputDir% -w");        
+    }
+}
