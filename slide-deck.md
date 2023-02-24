@@ -105,7 +105,7 @@ _start:
 #include <stdio.h>
   
 int main() {
-    printf("Hello World");
+    printf("Hello World\n");
     return 0;
 }
 ```
@@ -129,7 +129,7 @@ func main() {
 # Python Hello World
 
 ```python
-print("Hello World")
+print("Hello World\n")
 ```
 
 ---
