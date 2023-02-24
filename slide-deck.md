@@ -180,3 +180,29 @@ println("Hello World");
 * Wissen, was passiert
 
 ---
+
+# Whitespace und Kommentare
+
+Unsere wichtigste Aufgabe als guter Software Entwickler ist es verständlichen Code zu schreiben.
+
+```java
+/*
+ * Dieses Programm ist ein kleines Beispiel für Processing.
+ * Es öffnet ein Fenster, welches eine von einem Ursprungspunkt
+ * zu Maus Position eine Line zeichet.
+ */
+
+// Setup wird am Anfang des Programms einmal ausgefuehrt
+void setup() {
+  size(400, 400);
+  stroke(255);
+  background(192, 64, 0);
+}
+
+// Draw wird bei jedem Frame ausgeführt
+void draw() {
+  line(150, 25, mouseX, mouseY);
+}
+```
+
+---
