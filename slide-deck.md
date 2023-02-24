@@ -183,12 +183,18 @@ println("Hello World");
 
 # Whitespace und Kommentare
 
-Unsere wichtigste Aufgabe als guter Software Entwickler ist es verständlichen Code zu schreiben.
+Unsere wichtigste Aufgabe als guter Software Entwickler ist es verstaendlichen Code zu schreiben.
+
+<style scoped>
+pre {
+   font-size: 0.6rem;
+}
+</style>
 
 ```java
 /*
- * Dieses Programm ist ein kleines Beispiel für Processing.
- * Es öffnet ein Fenster, welches eine von einem Ursprungspunkt
+ * Dieses Programm ist ein kleines Beispiel fuer Processing.
+ * Es oeffnet ein Fenster, welches eine von einem Ursprungspunkt
  * zu Maus Position eine Line zeichet.
  */
 
