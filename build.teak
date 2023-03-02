@@ -19,6 +19,10 @@ void Start() {
         user = "-e MARP_USER=\"$(id -u):$(id -g)\"";
     }
 
+    if (type == "") {
+        type = "--html";
+    }
+
     if (file == "") {
         file = "slide-deck.md";
     }

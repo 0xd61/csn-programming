@@ -284,6 +284,51 @@ Sanduhr: *****   Pizzastueck: **********   Diamant:   **
 
 ---
 
+# Uebung 3
+
+## Perlenkette
+
+Wir wollen die folgende Perlenkette programmieren:
+
+![w:550 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe3_1.png)
+
+Die Perlenkette besteht aus 5 Kreisen mit schwarzem Rand und weisser Fuellung.
+
+---
+
+## Aufgabenstellung 3.1
+
+Programmiere das angegebene Bild mithilfe der grafischen Grundelemente von Processing.
+
+Du kannst das Template auf der naechsten Folie nutzen.
+
+---
+
+## Tipp 3.1
+
+Schaue dir dazu die Funktionen [size](https://processing.org/reference/size_.html) und [ellipse](https://processing.org/reference/ellipse_.html) in der Referenz an.
+
+```java
+// Die Groesse des grafischen Ausgabefensters wird auf 550 Pixel
+// in der Breite und 150 Pixel in der Hoehe festgelegt.
+size(550, 150);
+// Die Perlen werden durch vier Kreise von links nach rechts gezeichnet.
+// Zum Zeichnen von Kreisen stellt Processing keine explizite Anweisung
+// zur Verfuegung, zum Zeichnen von Ellipsen aber schon. Ellipsen haben
+// zwei Durchmesser: einen fuer die Breite und einen für die Hoehe der
+// Ellipse. Sind beide Durchmesser gleich, ergibt sich ein Kreis.
+// Vier Kreise mit 100 Pixel Durchmesser
+ellipse(75, 70, 100, 100);
+```
+
+---
+
+## Testfall 3.1
+
+Wenn deine Ausgabe (Groesse, Abstand und Farbe) dem Bild auf der Vorgabe entspricht, hast du alles richtig gemacht.
+
+---
+
 # Datentypen und Variablen
 
 * Basis Baustein jeder Programmiersprache
@@ -328,8 +373,58 @@ boolean isHappy = true;
 
 ---
 
-## Casting
+# Aufgabe 4
 
-* 
+## Ghettoblaster
+
+Zeichne den folgenden Ghettoblaster/Radio:
+
+![w:400 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_1.png)
+
+---
+
+## Aufgabenstellung 4.1
+
+Erstelle ein Programm, welches den Ghettoblaster mit den verschiedenen Basisfunktionen um Linien, Kreise, Rechtecke zu zeichnen, erstellt.
+
+Nutze Variablen für gleiche mehrfach verwendete Groessen.
+
+---
+
+## Tipp 4.1
+
+Schaue dir in der Referenz die folgenden Funktionen an:
+
+- [size()](https://processing.org/reference/size_.html)
+- [background()](https://processing.org/reference/background_.html)
+- [stroke()](https://processing.org/reference/stroke_.html)
+- [strokeWeight()](https://processing.org/reference/strokeWeight_.html)
+- [strokeCap()](https://processing.org/reference/strokeCap_.html)
+
+---
+
+## Tipp 4.2
+
+- [noStroke()](https://processing.org/reference/noStroke_.html)
+- [fill()](https://processing.org/reference/fill_.html)
+- [rect()](https://processing.org/reference/rect_.html)
+- [line()](https://processing.org/reference/line_.html)
+- [ellipse()](https://processing.org/reference/ellipse_.html)
+
+---
+
+## Tipp 4.3
+
+Die Fenster Koordianten haben ihren Nullpunkt immer oben links:
+
+![w:473 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_1.png)
+
+Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen.
+
+---
+
+## Testfall 4.1
+
+Siehe Aufgabenstellung
 
 ---
