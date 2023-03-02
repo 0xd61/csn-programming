@@ -393,7 +393,7 @@ Zeichne den folgenden Ghettoblaster/Radio:
 
 Erstelle ein Programm, welches den Ghettoblaster mit den verschiedenen Basisfunktionen um Linien, Kreise, Rechtecke zu zeichnen, erstellt.
 
-Nutze Variablen für gleiche mehrfach verwendete Groessen.
+Nutze Variablen fuer gleiche mehrfach verwendete Groessen.
 
 ---
 
@@ -406,6 +406,8 @@ Schaue dir in der Referenz die folgenden Funktionen an:
 - [stroke()](https://processing.org/reference/stroke_.html)
 - [strokeWeight()](https://processing.org/reference/strokeWeight_.html)
 - [strokeCap()](https://processing.org/reference/strokeCap_.html)
+
+Fortsetzung auf der naechsten Folie...
 
 ---
 
@@ -423,7 +425,7 @@ Schaue dir in der Referenz die folgenden Funktionen an:
 
 Die Fenster Koordianten haben ihren Nullpunkt immer oben links:
 
-![w:473 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_1.png)
+![w:473 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_2.png)
 
 Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen.
 
