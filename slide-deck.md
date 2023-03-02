@@ -373,6 +373,12 @@ boolean isHappy = true;
 
 ---
 
+# Aufgabe 3 (Refactoring)
+
+Ueberarbeite Aufgabe 3 und verwende Variablen fuer mehrfach verwendete Werte.
+
+---
+
 # Aufgabe 4
 
 ## Ghettoblaster
