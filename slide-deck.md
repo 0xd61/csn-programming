@@ -212,3 +212,124 @@ void draw() {
 ```
 
 ---
+
+# Uebung 1
+
+## Erstes Programm
+
+Schreibe ein Programm, das in der Konsole folgenden Text ausgibt:
+
+```java
+
+Three-Two-One - Takeoff!
+
+```
+
+---
+
+## Testfall 1.1
+
+Kontrolliere, ob die geforderte Ausgabe auf der Konsole ausgegeben wird
+
+---
+
+# Uebung 2
+
+## Beschreibung
+
+In dieser Uebung wollen wir ein Muster in die Konsole schreiben. Dafuer werden bestimmte Zeichen so oft hintereinander und untereinander geschrieben, bis sich daraus die geforderte Form ergibt.
+
+---
+
+## Aufgabenstellung 2.1
+
+Schreibe ein Programm, dass das folgende Muster auf der Konsole ausgibt:
+
+```java
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+     ***
+```
+
+---
+
+## Tipp 2.1
+
+Du kannst die Funktion println(), Leerzeichen und * verwenden.
+
+---
+
+## Testfall 2.1
+
+Die Ausgabe auf der Konsole entspricht dem vorgegeben Muster.
+
+---
+
+## Testfall 2.2
+
+Gib diese weiteren Muster auf der Konsole aus:
+
+```java
+Sanduhr: *****   Pizzastueck: **********   Diamant:   **
+          ***                  *      *              *  * 
+           *                    *   *               *    *
+          ***                    * *                 *  * 
+         *****                    *                   ** 
+```
+
+---
+
+# Datentypen und Variablen
+
+* Basis Baustein jeder Programmiersprache
+* Platzhalter fuer Daten
+* Logische Organisation durch verstaendliche Namen
+* Legen fest welche Art von Werten gueltig ist
+* Koennen selbst definiert werden
+
+---
+
+## Primitive Datentypen
+
+| Name    | Bezeichung | Beschreibung    | Groesse      |
+| -----   | ---------- | ------------    | -------      |
+| int     | Integer    | Ganzzahl        | 4 Bytes      |
+| long    | Long       | Ganzzahl        | 8 Bytes      |
+| float   | Float      | Kommazahl       | 4 Bytes      |
+| boolean | Boolean    | Wahr/Falsch     | 1 o. 4 Bytes |
+| byte    | Byte       | Ganzzahl        | 1 Byte       |
+| char    | Character  | Buchstabe       | 1 Byte       |
+| String  | String     | Buchstabenliste | n Bytes      |
+
+---
+
+## Variablen
+
+* Haben immer einen Datentyp
+* Muessen definiert und deklariert werden
+* Werte werden mit = zugewiesen
+
+---
+
+### Beispiel
+
+```java
+byte age = 25;
+float pi = 3.14f;
+String name = "Daniel";
+boolean isHappy = true;
+
+```
+
+---
+
+## Casting
+
+* 
+
+---
