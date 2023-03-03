@@ -178,6 +178,7 @@ println("Hello World");
 * Analyse vom Code
 * Fehler finden
 * Wissen, was passiert
+* Schritt fuer Schritt durch den Code gehen
 
 ---
 
@@ -315,7 +316,7 @@ size(550, 150);
 // Die Perlen werden durch vier Kreise von links nach rechts gezeichnet.
 // Zum Zeichnen von Kreisen stellt Processing keine explizite Anweisung
 // zur Verfuegung, zum Zeichnen von Ellipsen aber schon. Ellipsen haben
-// zwei Durchmesser: einen fuer die Breite und einen für die Hoehe der
+// zwei Durchmesser: einen fuer die Breite und einen fuer die Hoehe der
 // Ellipse. Sind beide Durchmesser gleich, ergibt sich ein Kreis.
 // Vier Kreise mit 100 Pixel Durchmesser
 ellipse(75, 70, 100, 100);
@@ -341,15 +342,15 @@ Wenn deine Ausgabe (Groesse, Abstand und Farbe) dem Bild auf der Vorgabe entspri
 
 ## Primitive Datentypen
 
-| Name    | Bezeichung | Beschreibung    | Groesse      |
-| -----   | ---------- | ------------    | -------      |
-| int     | Integer    | Ganzzahl        | 4 Bytes      |
-| long    | Long       | Ganzzahl        | 8 Bytes      |
-| float   | Float      | Kommazahl       | 4 Bytes      |
-| boolean | Boolean    | Wahr/Falsch     | 1 o. 4 Bytes |
-| byte    | Byte       | Ganzzahl        | 1 Byte       |
-| char    | Character  | Buchstabe       | 1 Byte       |
-| String  | String     | Buchstabenliste | n Bytes      |
+| Name    | Bezeichung | Beschreibung    | Groesse      | Beispiel |
+| -----   | ---------- | ------------    | -------      | -------- |
+| int     | Integer    | Ganzzahl        | 4 Bytes      | 1,2,3    |
+| long    | Long       | Ganzzahl        | 8 Bytes      | 1,2,3    |
+| float   | Float      | Kommazahl       | 4 Bytes      | 1.3f     |
+| boolean | Boolean    | Wahr/Falsch     | 1 o. 4 Bytes | true     |
+| byte    | Byte       | Ganzzahl        | 1 Byte       | 1,2,3    |
+| char    | Character  | Buchstabe       | 1 Byte       | 'a','b'  |
+| String  | String     | Buchstabenliste | n Bytes      | "abc"    |
 
 ---
 
@@ -369,6 +370,11 @@ float pi = 3.14f;
 String name = "Daniel";
 boolean isHappy = true;
 
+int a; // Variable deklaration (es wird deklariert, dass die Variable existiert); Wir wissen nicht, welchen Wert die Variable hier hat
+a = 20; // Variable definition (es wird definiert, welchen Wert die Variable hat)
+
+int b = 21; // Variable deklaration und definition in einem Schritt
+b = 22;
 ```
 
 ---
@@ -425,9 +431,9 @@ Fortsetzung auf der naechsten Folie...
 
 Die Fenster Koordianten haben ihren Nullpunkt immer oben links:
 
-![w:473 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_2.png)
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_2.png)
 
-Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen.
+Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen und die Groessen festzulegen.
 
 ---
 
