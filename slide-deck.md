@@ -379,13 +379,13 @@ b = 22;
 
 ---
 
-# Aufgabe 3 (Refactoring)
+# Uebung 3 (Refactoring)
 
 Ueberarbeite Aufgabe 3 und verwende Variablen fuer mehrfach verwendete Werte.
 
 ---
 
-# Aufgabe 4
+# Uebung 4
 
 ## Ghettoblaster
 
@@ -440,5 +440,168 @@ Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen und die G
 ## Testfall 4.1
 
 Siehe Aufgabenstellung
+
+---
+
+# Casting von Datentypen
+
+* Konvertieren von einem Datentyp in einen anderen
+* Casten von einem Float in einen Integer schneidet das Komma ab
+* Casten von einem String in einen Zahlentyp ist (ohne weiteres) nicht möglich
+* Explizites casten erflogt indem der Datentyp in Klammern vor die Variable geschrieben wird
+
+---
+
+## Beispiel
+
+```java
+int a = 5;
+float b = a;        // ERROR!
+
+float c = (float)a; // c entspricht jetzt der Zahl 5.0f
+c = c + 0.1;        // c entspricht jetzt der Zahl 5.1f
+
+int d = (int)c;     // d entspricht jetzt der Zahl 5
+
+// Einfaches runden auf eine Ganzzahl kann ueber casting erfolgen 
+
+// abrunden:
+float round_down = 5.3f;
+int rounded = (int)(round_down + 0.5f); // rounded entspricht jetzt der Zahl 5
+
+// aufrunden:
+float round_up = 5.6f;
+rounded = (int)(round_up + 0.5f); // rounded entspricht jetzt der Zahl 6
+```
+
+---
+
+# Operatoren
+
+* Mathematische Operatoren (+, -, *, /, %)
+* Zuweisungsoperatoren (=)
+* Vergleichsoperatoren (==, !=, >, <, >=, <=, !)
+* Kombinationsoperatoren (+=, -=, ++, --)
+
+---
+
+## Beispiel
+
+```java
+int ergebnis = 5 * 3 + 8 * (5 - 2) % 2;
+boolean negierung = !false;
+
+boolean richtiges_ergebnis = (5 * 3 == 15);
+```
+
+---
+
+# Uebung 5
+
+Rechnen mit Variablen und Datentypen
+
+## Aufgabenbescheibung 5.1
+
+Schreibe ein Programm, das die bei den Testfaellen stehenden Rechenaufgaben berechnet,
+die Ergebnisse in einer Variablen speichert und die Werte der Variablen in der Konsole
+ausgibt.
+
+---
+
+## Tipp 5.1
+
+- Solltest du ein Ergebnis wie NaN (Not a Number) auf der Konsole sehen, wurde eine
+Division mit der Zahl 0 durchgefuehrt. Anscheinend hast du hier statt einer Kommazahl
+eine Integer-Zahl fuer die Division verwendet. Achte daher darauf, dass bei der Division
+die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist Float
+
+---
+
+## Testfall 5.1
+
+```
+1  + 7 - 9 + 43 = 42                12 % 2 = 0
+43 - 9 + 7 + 1 = 42                 13 % 5 = 3
+4 * 3 + 1 = 13                      12345 / 10 = 1234
+9 * (2 + 1) = 27                    1234 / 10 = 123
+4 * 3 / 6 = 2                       123 / 10 = 12
+(3 - 7) * (7 + 4) = -44             12 / 10 = 1
+3 / 4 = 0                           1 / 10 = 0
+3.0 / 4.0 = 0.75                    12345 % 10 = 5
+4 / 3 + 1 * 7 = 8                   1234 % 10 = 4
+4.0 / 3.0 + 1 * 7 = 8.333333        123 % 10 = 3
+2 * 2 * 2 * 2 * 2 * 2 * 2 = 128     12 % 10 = 2
+42 / 7 / 3 = 2                      1 % 10 = 1
+```
+
+---
+
+# Uebung 6
+
+## Stoffwechselrate berechnen
+
+---
+
+## Aufgabenbeschreibung 6.1
+
+---
+
+## Testfall 6.1
+
+---
+
+# Uebung 7
+
+## Baumstammvolumen berechnen
+
+---
+
+## Aufgabenbeschreibung 7.1
+
+---
+
+## Testfall 7.1
+
+---
+
+# Uebung 8
+
+## Koerperoverflaeche
+
+---
+
+## Aufgabenbeschreibung 8.1
+
+---
+
+## Testfall 8.1
+
+---
+
+# Uebung 9
+
+## RGB nach CMYK
+
+---
+
+## Aufgabenbeschreibung 9.1
+
+---
+
+## Testfall 9.1
+
+---
+
+# Uebung 10
+
+## Tic-Tac-Toe Spielfeld
+
+---
+
+## Aufgabenbeschreibung 10.1
+
+---
+
+## Testfall 10.1
 
 ---
