@@ -666,6 +666,8 @@ Schreibe ein Programm mit dem Farbwerte von RGB in CMYK mithilfe dieser Formeln 
 
 - Das Maximum einer Zahl kannst du mir der Funktoin [max()](https://processing.org/reference/max_.html) berechnen.
 
+---
+
 ## Testfall 9.1
 
 - R: 75, G: 0, B: 130 -> C: 0.42307693, M: 1.0, Y: 0.0, K: 0.49019605
