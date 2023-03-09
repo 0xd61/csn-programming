@@ -447,8 +447,9 @@ Siehe Aufgabenstellung
 
 * Konvertieren von einem Datentyp in einen anderen
 * Casten von einem Float in einen Integer schneidet das Komma ab
-* Casten von einem String in einen Zahlentyp ist (ohne weiteres) nicht möglich
+* Casten von einem String in einen Zahlentyp ist (ohne weiteres) nicht moeglich
 * Explizites casten erflogt indem der Datentyp in Klammern vor die Variable geschrieben wird
+* Impliziertes casten moeglich, solange kein Datenverlust passiert (z.B. int -> float)
 
 ---
 
@@ -456,22 +457,22 @@ Siehe Aufgabenstellung
 
 ```java
 int a = 5;
-float b = a;        // ERROR!
+String b = a;        // ERROR!
 
-float c = (float)a; // c entspricht jetzt der Zahl 5.0f
+float c = a; // c entspricht jetzt der Zahl 5.0f
 c = c + 0.1;        // c entspricht jetzt der Zahl 5.1f
-
 int d = (int)c;     // d entspricht jetzt der Zahl 5
 
 // Einfaches runden auf eine Ganzzahl kann ueber casting erfolgen 
-
 // abrunden:
 float round_down = 5.3f;
 int rounded = (int)(round_down + 0.5f); // rounded entspricht jetzt der Zahl 5
+println(rounded);
 
 // aufrunden:
 float round_up = 5.6f;
 rounded = (int)(round_up + 0.5f); // rounded entspricht jetzt der Zahl 6
+println(rounded);
 ```
 
 ---
@@ -489,9 +490,14 @@ rounded = (int)(round_up + 0.5f); // rounded entspricht jetzt der Zahl 6
 
 ```java
 int ergebnis = 5 * 3 + 8 * (5 - 2) % 2;
+
 boolean negierung = !false;
 
 boolean richtiges_ergebnis = (5 * 3 == 15);
+
+println(ergebnis);
+println(negierung);
+println(richtiges_ergebnis);
 ```
 
 ---
@@ -510,10 +516,7 @@ ausgibt.
 
 ## Tipp 5.1
 
-- Solltest du ein Ergebnis wie NaN (Not a Number) auf der Konsole sehen, wurde eine
-Division mit der Zahl 0 durchgefuehrt. Anscheinend hast du hier statt einer Kommazahl
-eine Integer-Zahl fuer die Division verwendet. Achte daher darauf, dass bei der Division
-die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist Float
+- Achte darauf, dass bei der Division die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist Float
 
 ---
 
@@ -524,12 +527,12 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 43 - 9 + 7 + 1 = 42                 13 % 5 = 3
 4 * 3 + 1 = 13                      12345 / 10 = 1234
 9 * (2 + 1) = 27                    1234 / 10 = 123
-4 * 3 / 6 = 2                       123 / 10 = 12
+4 * 3 * 0.5 = 6                     123 / 10 = 12
 (3 - 7) * (7 + 4) = -44             12 / 10 = 1
 3 / 4 = 0                           1 / 10 = 0
-3.0 / 4.0 = 0.75                    12345 % 10 = 5
+3 / 4 = 0.75                        12345 % 10 = 5
 4 / 3 + 1 * 7 = 8                   1234 % 10 = 4
-4.0 / 3.0 + 1 * 7 = 8.333333        123 % 10 = 3
+4 / 3 + 1 * 7 = 8.333333            123 % 10 = 3
 2 * 2 * 2 * 2 * 2 * 2 * 2 = 128     12 % 10 = 2
 42 / 7 / 3 = 2                      1 % 10 = 1
 ```
@@ -540,13 +543,44 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 
 ## Stoffwechselrate berechnen
 
+Die Stoffwechselrate (Grundumsatz G) ist eine Goesse, die den Kalorienverbrauch (Energiemenge) eines Menschen pro Tag bestimmt.
+Diese Energiemenge wird benoetigt um den Koeper am Leben zu halten.
+
 ---
 
 ## Aufgabenbeschreibung 6.1
 
+Schreibe ein Programm, welches den Grundumsatz (Stoffwechselrate) nach der Harris-Benedict-Formel berechnet und die Ergebnisse fuer beide Geschlechter in der Konsole ausgibt.
+
+```
+Fuer Maenner:
+G = 66,47+13,7*m +5*l-6,8*t
+
+Fuer Frauen:
+G = 655,1+9,6*m +1,8*l-4,7*t
+
+l = Groesse in cm
+m = Gewicht in kg
+t = Alter in Jahren
+```
+
+---
+
+## Tipp 6.1
+
+Wenn du nicht weiter kommst, versuche folgendes:
+- Speichere die Eingabegroessen als Variablen
+- Berechne die Formeln fuer Mann und Frau in unterschiedlichen Variablen
+- Schreibe das Ergebnis in die Konsole
+- Achte auf den passenden Datentyp
+
 ---
 
 ## Testfall 6.1
+
+- Gewicht: 58kg, Goesse: 180cm, Alter: 25 Jahre -> Mann: 1591.07 Kalorien pro Tag, Frau: 1418.4 Kalorien pro Tag
+- Gewicht: 90kg, Goesse: 160cm, Alter: 45 Jahre -> Mann: 1793.47 Kalorien pro Tag, Frau: 1595.6 Kalorien pro Tag
+- Gewicht: 45kg, Goesse: 176cm, Alter: 17 Jahre -> Mann: 1447.37 Kalorien pro Tag, Frau: 1324.0 Kalorien pro Tag
 
 ---
 
@@ -554,13 +588,30 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 
 ## Baumstammvolumen berechnen
 
+Nachdem ein Baum gefaellt wurde, moechte der Schreiner wissen, wie viel Holz der Stamm hat. Dazu rechnen wir das Volumen mit der folgenden Formel aus:
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe7_1.png)
+
+Der Durchmesser (D) ist in Zentimeter und die Laenge (L) in Meter angegeben.
+
 ---
 
 ## Aufgabenbeschreibung 7.1
 
+Schreibe ein Programm, das nach der vorherigen Formel das Volumen eines Baumstamms berechnet
+
+---
+
+## Tipp 7.1
+
+- Die Kreiszahl PI steht in Processing als Variable PI zur Verfuegung
+
 ---
 
 ## Testfall 7.1
+
+- 10 Meter lang und 33 cm Durchmesser: 0.70685834
+- 15 Meter lang und 32 cm Durchmesser: 1.2063715
 
 ---
 
@@ -568,13 +619,29 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 
 ## Koerperoverflaeche
 
+Die Koerperoberflaeche eines Menschen kann nach folgender Formel berechnet werden:
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe8_1.png)
+
+In der Formel is die Koerpergroesse (h) in cm und das Koerpergewicht (w) in kg angegeben. Das Ergebnis ist die Oberflaeche in m^2. 
+
 ---
 
 ## Aufgabenbeschreibung 8.1
 
+Schreibe ein Programm, das die Koerperoberflaeche eines Menschen berechnet.
+
+---
+
+## Tipp 8.1
+
+- Um die Wurzel zu berechnet kannst du die Funktion [sqrt()](https://processing.org/reference/sqrt_.html) verwenden.
+
 ---
 
 ## Testfall 8.1
+
+- 1.80 m und 58 kg -> 1.7029387
 
 ---
 
@@ -582,13 +649,26 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 
 ## RGB nach CMYK
 
+Farben beim Computer werden meit in RGB angegeben. Diese bescheiben den Anteil von Rot (R), Gruen (G) und Blau (B) im Zahlenbereich von 0 bis 255.
+Beim Drucken wird normalerweise das CMYK-Format verwendet. Dabei handelt es sich um die Farben Cyan (C), Magenta (M), Gelb/Yellow (Y) und Schwarz/Key (K) im Zahlenbereich zwischen 0 und 1.
+
 ---
 
 ## Aufgabenbeschreibung 9.1
 
+Schreibe ein Programm mit dem Farbwerte von RGB in CMYK mithilfe dieser Formeln umgewandelt werden koennen.
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe9_1.png)
+
 ---
 
+## Tipp 9.1
+
+- Das Maximum einer Zahl kannst du mir der Funktoin [max()](https://processing.org/reference/max_.html) berechnen.
+
 ## Testfall 9.1
+
+- R: 75, G: 0, B: 130 -> C: 0.42307693, M: 1.0, Y: 0.0, K: 0.49019605
 
 ---
 
@@ -596,12 +676,28 @@ die korrekten Datentypen verwendet werden. Beispiel: 255 ist Integer, 255.0 ist 
 
 ## Tic-Tac-Toe Spielfeld
 
+In einer spaeteren Aufgabe wollen wir das Spiel Tic-Tac-Toe programmieren. Dafuer wird ein Spielfeld mit 9 Feldern benoetigt.
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe10_1.png)
+
 ---
 
 ## Aufgabenbeschreibung 10.1
 
+Schreibe ein Programm, welches ein leeres Spielfeld fuer Tic-Tac-Toe erzeugt und darstellt.
+Mache dabei Gebrauch von eigenen Variablen.
+
+---
+
+## Tipp 10.1
+
+- Rechteck oder Linie zeichnen? Beides ist moeglich, aber ein Fall ist einfacher.
+- Speichere wiederholende Zahlenwerte in einer Variable.
+
 ---
 
 ## Testfall 10.1
+
+Siehe Beschreibung.
 
 ---
