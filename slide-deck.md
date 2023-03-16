@@ -703,3 +703,106 @@ Mache dabei Gebrauch von eigenen Variablen.
 Siehe Beschreibung.
 
 ---
+
+# Kontrollstrukturen
+
+* Ablauf im Programm steuern
+* Veraendern die Reihenfolge der ausgefuehrten Anweisungen
+* Bedingte Anweisung
+* Wiederholungsanweisung
+
+---
+
+## Bedinge Anweisung
+
+### [If-Else Anweisung](https://processing.org/reference/if.html)
+
+```java
+if(<boolescherAusdruck>) {
+    // In diesen geklammerten Block kommen alle die Anweisungen hinein,
+    // die abgearbeitet werden, wenn die Bedingung wahr ist.
+} else {
+    // In diesen geklammerten Block kommen alle Anweisungen hinein,
+    // die abgearbeitet werden, wenn die Bedingung falsch ist.
+}
+```
+
+Der [`else`-Block](https://processing.org/reference/else.html) ist optional.
+
+---
+
+## Bedingte Anweisung
+
+### [Switch Anweisung](https://processing.org/reference/switch.html)
+
+<style scoped>
+pre {
+   font-size: 0.5rem;
+}
+</style>
+
+```java
+switch(<Ausdruck>) {
+    case <Konstante_1>:
+        <Anweisungsblock_1>;
+    break;
+    case <Konstante_2>:
+        <Anweisungsblock_2>;
+    break;
+    ...
+    case <Konstante_n>:
+        <Anweisungsblock_n>;
+    break;
+    default:
+        <Anweisungsblock_sonst>;
+}
+```
+
+Intern funktionieren Switch Anweisungen wie mehrere If-Else Anweisungen zusammen.
+Achtung `break` nicht vergessen! Ansonsten wird der naechste Block auch ausgefuehrt.
+
+---
+
+## Wiederholungsanweisung (Schleifen)
+
+### [For-Loop](https://processing.org/reference/for.html)
+
+```java
+// for(<initialeVariable>; <boolscherAusdruck>; <variableAktualisieren>)
+for(int i=1; i<10; i++) {
+    // In diesen geklammerten Block kommen alle die Anweisungen hinein,
+    // die wiederholt abgearbeitet werden sollen.
+}
+
+```
+
+---
+
+## Wiederholungsanweisung (Schleifen)
+
+### [While-Loop](https://processing.org/reference/while.html)
+
+```java
+int i = 0;
+while(i<10) {
+    // Anweisungen, die abgearbeitet werden sollen
+    i++;
+}
+
+// Endlosschleife
+while(true) {
+    // Diese schleife wird nie aufhoeren, ausser sie wird mit einem Break beendet
+}
+
+```
+
+---
+
+## Wiederholungsanweisung (Schleifen)
+
+### Vorzeitiges Beenden oder Ueberspringen
+
+- Das Keyword [`continue`](https://processing.org/reference/continue.html) beendet den aktuellen Loop-Durchlauf und prueft die Bedingung erneut.
+- Das Keyword [`break`](https://processing.org/reference/break.html) beendet den aktuellen Loop-Durchlauf ohne die Bedinung zu pruefen.
+
+---
