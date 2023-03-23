@@ -554,10 +554,10 @@ Schreibe ein Programm, welches den Grundumsatz (Stoffwechselrate) nach der Harri
 
 ```
 Fuer Maenner:
-G = 66,47+13,7*m +5*l-6,8*t
+G = 66.47+13.7*m +5*l-6.8*t
 
 Fuer Frauen:
-G = 655,1+9,6*m +1,8*l-4,7*t
+G = 655.1+9.6*m +1.8*l-4.7*t
 
 l = Groesse in cm
 m = Gewicht in kg
@@ -731,6 +731,25 @@ Der [`else`-Block](https://processing.org/reference/else.html) ist optional.
 
 ---
 
+### [If-Else Anweisung](https://processing.org/reference/if.html)
+
+Die Anweisungen koennen beliebig verschachtelt werden:
+
+```java
+if(a == true) {
+    if(b == true) {
+        // ...
+    }
+} else if(c == true) {
+    // ...
+} else {
+    // ...
+}
+
+```
+
+---
+
 ## Bedingte Anweisung
 
 ### [Switch Anweisung](https://processing.org/reference/switch.html)
@@ -773,7 +792,20 @@ for(int i=1; i<10; i++) {
     // In diesen geklammerten Block kommen alle die Anweisungen hinein,
     // die wiederholt abgearbeitet werden sollen.
 }
+```
 
+---
+
+### [For-Loop](https://processing.org/reference/for.html)
+
+Auch Loops koennen verschachtelt werden:
+
+```java
+for(int y = 0; y < 10; y++) {
+    for(int x = 0; x < 12; x++) {
+        // ...
+    }
+}
 ```
 
 ---
@@ -791,7 +823,7 @@ while(i<10) {
 
 // Endlosschleife
 while(true) {
-    // Diese schleife wird nie aufhoeren, ausser sie wird mit einem Break beendet
+    // Diese Schleife wird nie aufhoeren, ausser sie wird mit einem Break beendet
 }
 
 ```
@@ -804,5 +836,132 @@ while(true) {
 
 - Das Keyword [`continue`](https://processing.org/reference/continue.html) beendet den aktuellen Loop-Durchlauf und prueft die Bedingung erneut.
 - Das Keyword [`break`](https://processing.org/reference/break.html) beendet den aktuellen Loop-Durchlauf ohne die Bedinung zu pruefen.
+
+---
+
+# Uebung 11
+
+## Maximum bestimmen
+
+Bestimme die groesste Zahl aus den vorliegenden Zahlen.
+
+---
+
+## Aufgabenbeschreibung 11.1
+
+Bestimme das Maximum aus drei vorliegenden Integer-Zahlen mithilfe von `if-else`-Anweisungen. Nutze dafuer das Template auf der naechsten Folie.
+
+---
+
+```java
+// Variablen deklarieren und initialisieren
+int a = 1;
+int b = 2;
+int c = 3;
+
+// Variable deklarieren, die den maximalen Wert halten soll
+int maxi = -2147483648; // kleinste erlaubte Integer-Zahl
+
+// TODO: Maximum bestimmen
+// ...
+
+// Ausgabe des Maximums in der Konsole
+println(
+    "Der groesste Wert in der Menge {" + a + ", " + b + ", " + c +
+    "} lautet: " + maxi
+);
+```
+
+---
+
+## Tipp 11.1
+
+- Wenn Variable a groesser ist als b und c, dann ist a das Maximum. Wenn b groesser ist als a und c, dann ist b das Maximum. Trifft beides nicht zu, dann kann nur c das Maximum sein.
+
+---
+
+## Testfall 11.1
+
+- Vorliegende Zahlen: 1, 2, 3 -> Maximum davon: 3
+- Vorliegende Zahlen: 42, 7, 13 -> Maximum davon: 42
+- Vorliegende Zahlen: -9, 4, 2 -> Maximum davon: 4
+
+---
+
+# Uebung 12
+
+## Summe berechnen
+
+In dieser Aufgabe wollen wir die Summe von 24 aufeinanderfolgenden Zahlen berechnen.
+Mit einem Taschenrechner ist das ein sehr grosser Tippaufwand. Fuer den Computer kein Problem.
+
+---
+
+## Aufgabenbeschreibung 12.1
+
+Schreibe ein Programm, das mit einer for-Schleife die Summe der Zahlen von 3 bis 27 berechnet und das Ergebnis in der Konsole ausgibt.
+
+---
+
+## Tipp 12.1
+
+- Deklariere und initialisiere die Variable, die die Summe beinhalten soll.
+- Gehe die Zahlen von 3 bis 27 nacheinander durch.
+- Addiere zur Summenvariable die aktuelle Zahl.
+
+---
+
+## Testfall 12.1
+
+- Das Ergebnis der Summe von 3 bis 27 ist 375.
+- Das Ergebnis der Summe von 1 bis 100 ist 5050.
+
+---
+
+# Uebung 12
+
+## Pin-Code Generator
+
+In dieser Aufgabe wollen wir alle vierstelligen PINs einer Bankkarte oder Passcodes erzeugen
+und in der Konsole ausgeben.
+
+---
+
+## Aufgabenbeschreibung 12.1
+
+Schreibe ein Programm, das die oben beschriebene Aufgabe umsetzt. Setze diese mit einer `for`-Schleife um.
+
+---
+
+## Tipp 12.1
+
+- Pruefe, ob die Zahl ein-, zwei-, oder dreistellig ist, und fuege gegebenenfalls voranstehende Nullen hinzu.
+- Da das Processing-Konsolenfenster maximal 500 Eintraege anzeigen kann, sind bei einem schnellen Prozessor eventuell nur die letzten 500 Eintraege sichtbar. Du kannst die Funktionalitaet aber ueberpruefen, indem du die Schleifenanweisung etwas langsamer ablaufen laesst. Der Processing-Befehl [delay(1)](https://processing.org/reference/delay_.html) fuegt beispielsweise eine Pause von einer Millisekunde in dein Programm ein.
+
+---
+
+## Testfall 12.1
+Ausgabe:
+
+<style scoped>
+pre {
+   font-size: 0.8rem;
+}
+</style>
+
+```
+0000
+0001
+0002
+0003
+0004
+...
+9995
+9996
+9997
+9998
+9999
+```
+Alle PINs sind vierstellig
 
 ---
