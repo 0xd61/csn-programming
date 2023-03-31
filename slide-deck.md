@@ -965,3 +965,191 @@ pre {
 Alle PINs sind vierstellig
 
 ---
+
+## Verknuepfte Bedingungen
+
+Manchmal ist es erforderlich in einer If-Anweisunge mehrere Ausdruecke zu pruefen. Das ist moeglich, indem man die Ausdrucke mit `&&` (und) oder `||` (oder) verknuepft.
+
+<style scoped>
+pre {
+   font-size: 0.8rem;
+}
+</style>
+
+```java
+// Wenn a gleich 3 und b gleich 8:
+if(a == 3 && b == 8) {
+    // ...
+}
+// Wenn a groesser 2 oder a kleiner 0:
+if(a > 2 || a < 0) {
+    // ...
+}
+// Wenn name keinen Text hat und b > 3 ist oder a gleich 2:
+if(name == "" && b > 3 || a == 2) {
+    // ...
+}
+```
+
+---
+
+# Uebung 13
+
+## Radialer Farbverlauf
+
+Mit Bildbearbeitungssoftware wie z.B. Photoshop kann man Farbverlaeufe erstellen. In dieser Uebung wollen wir diese Funktionalitaet selbst programmieren
+
+---
+
+## Aufgabenbeschreibung 13.1
+
+Erstelle ein Programm was den folgenden Farbverlauf erstellt
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe13_1.png)
+
+---
+
+## Tipp 13.1
+
+Erstelle einen weissen Kreis. Darauf werden nun weitere kleiner werdende Kreise, mit immer dunklerer Farbe gezeichnet.
+
+Achte darauf, dass der Kreis Radius nicht negativ wird. Denn dann wird der Kreis wieder groesser auf den Bildschirm gezeichnet.
+
+---
+
+## Testfall 13.1
+
+Siehe Aufgabenbeschreibung
+
+---
+
+# Uebung 14
+
+## Moderne Kunst
+
+Moderne Kunst kann auch mit einem Computer erstellt werden.
+
+In diesem Fall ist wichtig:
+
+- Farben werden zufaellig generiert
+- Alle Vierecke sind gleich gross
+- _Optional:_ Die Vierecke sind leicht gedreht
+
+---
+
+## Aufgabenbeschreibung 14.1
+
+Erstelle ein Programm, welches das folgende Bild erstellt
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe14_1.png)
+
+---
+
+## Tipp 14.1
+
+- Berechne die Anzahl der Felder anhand der Breite und Hoehe des Fensters und der gewuenschten Groesse der Felder
+- Benutze die Funktion [random](https://processing.org/reference/random_.html)
+
+---
+
+## Testfall 14.1
+
+Siehe Aufgabenbeschreibung
+
+---
+
+# Uebung 15
+
+## Interaktiver Button
+
+Ein Butten veraendert in der Regel seine Farbe, wenn man mit der Maus darueber hovert. In dieser Uebung wollen wir einen solchen Button erstellen.
+
+---
+
+## Aufgabenbeschreibung 15.1
+
+Erstelle ein Programm, was ein blauen Button zeichnet. Wenn die Maus sich darueber befindet soll der Button die Farbe auf gruen aendern.
+Die `x`- und `y`-Koordinaten der Maus kann man mit den Variablen `mouseX` und `mouseY` herausfinden.
+
+<style>
+img[alt~="right"] {
+  position: absolute;
+  top: 430px;
+  right: 200px;
+  width: 300px;
+}
+</style>
+
+<style>
+img[alt~="left"] {
+  position: absolute;
+  top: 430px;
+  left: 200px;
+  width: 300px;
+}
+</style>
+
+
+![left](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe15_1.png)
+![right](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe15_2.png)
+
+---
+
+## Tipp 15.1
+
+Du kannst dieses Template benutzen:
+
+```java
+void setup() {
+    size(800, 800);
+    // Dieser Bereich wird einmal am Anfang aufgerufen
+}
+void draw() {
+    // Hier kommt das geforderte Programm hinein
+    // Dieser Bereich wird durchgehend aufgerufen
+}
+```
+
+---
+
+## Tipp 15.2
+
+- Es ist sinnvoll, die Eigenschaften des Rechtecks als Variablen zu speichern. Diese wirst du bei den Kontrollen der Mausposition haeufig benoetigen.
+- Dies sind die moeglichen Maus Positionen, die abgefragt werden muessen:
+
+<style>
+img[alt~="right"] {
+  position: absolute;
+  top: 460px;
+  right: 100px;
+  width: 250px;
+}
+</style>
+
+<style>
+img[alt~="left"] {
+  position: absolute;
+  top: 430px;
+  left: 100px;
+  width: 250px;
+}
+</style>
+
+<style>
+img[alt~="middle"] {
+  position: absolute;
+  top: 430px;
+  left: 500px;
+  width: 250px;
+}
+</style>
+
+![left](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe15_3.png)
+![middle](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe15_4.png)
+![right](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe15_5.png)
+
+---
+
+# Funtionen
+
+---
