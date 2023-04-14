@@ -1152,4 +1152,109 @@ img[alt~="middle"] {
 
 # Funtionen
 
+* Vermeidung von wiederholenden Code Bloecken
+* Sammlung von Anweisungen innerhalb von `{}` (Bloecken)
+* Haben immer eine Definition und einen Namen
+* Separierung von Code, der mehrfach aufgerufen werden kann
+* Macht Code uebersichtlich und leicht zu aendern (muss nur an einer Stelle geaendert werden)
+
 ---
+
+## Syntax (Signatur der Funktion)
+
+- Rueckgabetyp (wenn nichts zurueck gegeben wird, `void` verwenden)
+- Funktionsnamen (sollte beschreiben, was die Funktion macht)
+- Parameterliste (Keine oder mehrere Variablen durch Komma getrennt)
+- Anweisungsblock
+
+Durch diese Signatur ist die Funktion vom Programm identifizierbar und kann aufgerufen werden.
+
+---
+
+## Syntax (Beispiel)
+
+```java
+int BerechneSumme(int a, int b) {
+    int ergebnis = a + b;
+    return ergebnis;
+}
+```
+
+Die Funktion kann dann aufgerufen werden mit:
+
+```java
+int summe = BerechneSumme(15, 39);
+```
+
+---
+
+## Lokale vs Globale Variablen
+
+| Global | Lokal |
+| ------ | ----- |
+| Ueberall im Programm verwendbar | Nur im aktuellen Block verwendbar |
+| Ausserhalb eines Blocks definiert und deklariert | Innerhalb eines Blocks definiert und deklariert |
+| Name kann nur 1x definiert werden | Name kann in jedem Block neu definiert und verwendet werden |
+
+---
+
+## Lokale vs Globale Variablen Beispiel
+
+```java
+String x = "global";
+
+def localVar() {
+    String y = "local";
+    println(x);
+    println(y);
+}
+
+void setup() {
+    localVar();
+    println(x); // gibt global aus
+    println(y); // ERROR! (da Variable nur innerhalb des Blocks existiert)
+}
+```
+
+---
+
+## Processing Einstiegspunkt
+
+Da wir jetzt mit Funktionen arbeiten benoetigt Processing einen Einstiegspunkt, bei dem der Programmablauf startet.
+Dieser ist in Processing die [`void setup()`](https://processing.org/reference/setup_.html)-Funktion.
+
+Eine weitere Funktion, die direkt nach der `setup`-Funktion aufgerufen wird ist die [`void draw()`](https://processing.org/reference/draw_.html)-Funktion. Diese wird periodisch fuer jeden Frame aufgerufen.
+
+---
+
+### Beispiel
+
+Unsere Programme muessen somit jetzt immer mindestens diese 2 Funktionen enthalten
+
+```java
+void setup() {
+  // Wird einmaling am Anfang aufgerufen
+}
+
+void draw() {
+  // Wird direkt nach setup periodisch aufgerufen
+}
+```
+
+---
+
+# Uebung 16
+
+Beliebiges Programm erstellen, welches 2 Funktionen enthaelt und aufruft.
+
+---
+
+## Aufgabenbeschreibung 16.1
+
+Erstelle alleine oder mit einem Partner ein kleines Programm, welches mindestens 2 Funktionen (zusaetzlich zu `setup` und `draw`) mit
+unterschiedlichen Parametern oder Rueckgabewerten enthaelt.
+
+Stelle dein Programm deinen Mitschuelern vor.
+
+---
+
