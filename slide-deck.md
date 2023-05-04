@@ -206,7 +206,7 @@ void setup() {
   background(192, 64, 0);
 }
 
-// Draw wird bei jedem Frame ausgef�hrt
+// Draw wird bei jedem Frame ausgeführt
 void draw() {
   line(150, 25, mouseX, mouseY);
 }
@@ -1258,3 +1258,130 @@ Stelle dein Programm deinen Mitschuelern vor.
 
 ---
 
+# Uebung 17
+
+## Fakultaet berechnen
+
+Berechne die Fakultaet einer vorgegeben Zahl. Die Fakultaet berechnet man, indem man alle Zahlen von 1 bis n multipliziert.
+
+Beispiel:
+Fakultaet n=4 ->  `1 * 2 * 3 * 4 = 24`
+
+---
+
+## Tipp 17.1
+
+```java
+int factorial(int n) {
+  // Diese Funktion soll die Fakultaet von n berechnen.
+  // Die Fakultat von 6 berechnet man z.B. mit 1*2*3*4*5*6.
+  // Die Variable n gibt vor wie oft die oben genannte Multiplikation durchgefuehrt wird.
+}
+
+void setup() {
+  // Startpunkt des Hauptprogramms
+  // Hier wird die implementierte Funktion aufgerufen.
+  // Das Ergebnis soll mit println ausgegeben werden.
+}
+```
+
+---
+
+## Testfall 17.1
+
+- n=6: 720
+- n=2: 2
+- n=1: 1
+- n=9: 362880
+
+---
+
+# Uebung 18 
+
+## Schaltjahr Pruefung
+
+Bei Schaltjahren hat der Februar 29 Tage anstatt der ueblichen 28 Tage.
+Schaltjahre können wir dadurch bestimmen, wenn die Jahreszahl durch 4 teilbar ist. Allerdings darf die Jahreszahl zusaetzlich nicht durch 100 teilbar sein. 
+Wenn die Jahreszahl wiederum durch 400 teilbar ist, ist es doch ein Schaltjahr.
+
+---
+
+## Aufgabenbeschreibung 18.1
+
+Schreibe eine Funktion, die ueberprueft, ob es sich bei einer uebergebenen Jahreszahl um ein Schaltjahr handelt. Sollte das Jahr ein Schaltjahr sein, wird true zurueckgegeben. Sollte dies nicht der Fall sein, wird false zurueckgegeben.
+
+---
+
+## Tipp 18.1
+
+- Probiere, die Ablaeufe in der Funktion testweise auszugeben. Wird zum Beispiel bei einer entsprechenden Jahreszahl die erwartete Stelle im Quellcode ausgefuehrt? Sollte dies nicht der Fall sein, scheint es einen (Denk-)Fehler im Quellcode zu geben.
+- Teilbarkeit in Zahlen laesst sich mit dem Modulo-Operator (%) pruefen, welcher den Rest einer Division zurueckgibt.
+
+---
+
+## Tipp 18.2
+
+```java
+// Erstelle hier die Funktion checkLeapYear, welche uns das Ergebnis liefert.
+
+void setup() {
+  println("War 1800 ein Schaltjahr? -> " + checkLeapYear(1800));
+  println("War 2016 ein Schaltjahr? -> " + checkLeapYear(2016));
+  println("Wird 2020 ein Schaltjahr sein? -> " + checkLeapYear(2020));
+}
+```
+
+---
+
+## Testfall 18.1
+
+- Schaltjahre:
+  - 2012
+  - 2000
+  - 1916
+  - 1896
+- keine Schaltjahre:
+  - 2013
+  - 2003
+  - 1900
+  - 1881
+
+---
+
+# Uebung 19
+
+## Literzahlen umwandeln
+
+Bei dieser Uebung wollen wir uns das umrechnen von Groessen vereinfachen.
+
+---
+
+## Aufgabenbeschreibung 19.1
+
+Schreibe eine Funktion mit Namen volumeConverter, die eine als float-Wert uebergebene Literzahl umwandelt und als String zurueckgibt.
+
+| float-Wert | Erzeugter String |
+| ---------- | ---------------- |
+| 1.0 und groesser | <vol> l |
+| 0.1 und groesser | <vol> cl |
+| 0.001 und groesser | <vol> ml |
+| kleiner als 0.001 | Number too small!| 
+
+---
+
+## Tipp 19.1
+
+- Wenn du die Kommazahlen entfernt haben moechtest, probiere doch eine Umwandlung zu Integer-Werten.
+- Natuerlich musst du bei Divisionen auch aufpassen, dass nicht der Kommawert zu frueh abgeschnitten wird.
+- Float-Werte muessen in Java immer mit einem nachstehenden f definiert werden. Beispiel: 0.01f.
+- Strings können mit einem + verknuepft werden, z.B. `"abc" + "def" -> "abcdef" oder "abc" + 123 -> "abc123"` 
+
+---
+
+## Testfall 19.1
+
+- vol = 3.0 → 3.0 l
+- vol = 0.3 → 30 cl
+- vol = 0.003 → 3 ml
+
+---
