@@ -206,7 +206,7 @@ void setup() {
   background(192, 64, 0);
 }
 
-// Draw wird bei jedem Frame ausgeführt
+// Draw wird bei jedem Frame ausgefuehrt
 void draw() {
   line(150, 25, mouseX, mouseY);
 }
@@ -1150,7 +1150,7 @@ img[alt~="middle"] {
 
 ---
 
-# Funtionen
+# Funktionen
 
 * Vermeidung von wiederholenden Code Bloecken
 * Sammlung von Anweisungen innerhalb von `{}` (Bloecken)
