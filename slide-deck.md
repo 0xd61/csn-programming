@@ -1362,9 +1362,9 @@ Schreibe eine Funktion mit Namen volumeConverter, die eine als float-Wert überg
 
 | float-Wert | Erzeugter String |
 | ---------- | ---------------- |
-| 1.0 und größer | <vol> l |
-| 0.1 und größer | <vol> cl |
-| 0.001 und größer | <vol> ml |
+| 1.0 und größer | \<vol\> l |
+| 0.1 und größer | \<vol\> cl |
+| 0.001 und größer | \<vol\> ml |
 | kleiner als 0.001 | Number too small!| 
 
 ---
