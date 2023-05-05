@@ -178,13 +178,13 @@ println("Hello World");
 * Analyse vom Code
 * Fehler finden
 * Wissen, was passiert
-* Schritt fuer Schritt durch den Code gehen
+* Schritt für Schritt durch den Code gehen
 
 ---
 
 # Whitespace und Kommentare
 
-Unsere wichtigste Aufgabe als guter Software Entwickler ist es verstaendlichen Code zu schreiben.
+Unsere wichtigste Aufgabe als guter Software Entwickler ist es verständlichen Code zu schreiben.
 
 <style scoped>
 pre {
@@ -194,19 +194,19 @@ pre {
 
 ```java
 /*
- * Dieses Programm ist ein kleines Beispiel fuer Processing.
- * Es oeffnet ein Fenster, welches eine von einem Ursprungspunkt
+ * Dieses Programm ist ein kleines Beispiel für Processing.
+ * Es öffnet ein Fenster, welches eine von einem Ursprungspunkt
  * zu Maus Position eine Line zeichet.
  */
 
-// Setup wird am Anfang des Programms einmal ausgefuehrt
+// Setup wird am Anfang des Programms einmal ausgeführt
 void setup() {
   size(400, 400);
   stroke(255);
   background(192, 64, 0);
 }
 
-// Draw wird bei jedem Frame ausgefuehrt
+// Draw wird bei jedem Frame ausgeführt
 void draw() {
   line(150, 25, mouseX, mouseY);
 }
@@ -214,7 +214,7 @@ void draw() {
 
 ---
 
-# Uebung 1
+# Übung 1
 
 ## Erstes Programm
 
@@ -234,11 +234,11 @@ Kontrolliere, ob die geforderte Ausgabe auf der Konsole ausgegeben wird
 
 ---
 
-# Uebung 2
+# Übung 2
 
 ## Beschreibung
 
-In dieser Uebung wollen wir ein Muster in die Konsole schreiben. Dafuer werden bestimmte Zeichen so oft hintereinander und untereinander geschrieben, bis sich daraus die geforderte Form ergibt.
+In dieser Übung wollen wir ein Muster in die Konsole schreiben. Dafür werden bestimmte Zeichen so oft hintereinander und untereinander geschrieben, bis sich daraus die geforderte Form ergibt.
 
 ---
 
@@ -276,7 +276,7 @@ Die Ausgabe auf der Konsole entspricht dem vorgegeben Muster.
 Gib diese weiteren Muster auf der Konsole aus:
 
 ```java
-Sanduhr: *****   Pizzastueck: **********   Diamant:   **
+Sanduhr: *****   Pizzastück: **********   Diamant:   **
           ***                  *      *              *  * 
            *                    *   *               *    *
           ***                    * *                 *  * 
@@ -285,7 +285,7 @@ Sanduhr: *****   Pizzastueck: **********   Diamant:   **
 
 ---
 
-# Uebung 3
+# Übung 3
 
 ## Perlenkette
 
@@ -293,7 +293,7 @@ Wir wollen die folgende Perlenkette programmieren:
 
 ![w:550 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe3_1.png)
 
-Die Perlenkette besteht aus 5 Kreisen mit schwarzem Rand und weisser Fuellung.
+Die Perlenkette besteht aus 5 Kreisen mit schwarzem Rand und weißer Füllung.
 
 ---
 
@@ -301,7 +301,7 @@ Die Perlenkette besteht aus 5 Kreisen mit schwarzem Rand und weisser Fuellung.
 
 Programmiere das angegebene Bild mithilfe der grafischen Grundelemente von Processing.
 
-Du kannst das Template auf der naechsten Folie nutzen.
+Du kannst das Template auf der nächsten Folie nutzen.
 
 ---
 
@@ -310,13 +310,13 @@ Du kannst das Template auf der naechsten Folie nutzen.
 Schaue dir dazu die Funktionen [size](https://processing.org/reference/size_.html) und [ellipse](https://processing.org/reference/ellipse_.html) in der Referenz an.
 
 ```java
-// Die Groesse des grafischen Ausgabefensters wird auf 550 Pixel
-// in der Breite und 150 Pixel in der Hoehe festgelegt.
+// Die Größe des grafischen Ausgabefensters wird auf 550 Pixel
+// in der Breite und 150 Pixel in der Höhe festgelegt.
 size(550, 150);
 // Die Perlen werden durch vier Kreise von links nach rechts gezeichnet.
 // Zum Zeichnen von Kreisen stellt Processing keine explizite Anweisung
-// zur Verfuegung, zum Zeichnen von Ellipsen aber schon. Ellipsen haben
-// zwei Durchmesser: einen fuer die Breite und einen fuer die Hoehe der
+// zur Verfügung, zum Zeichnen von Ellipsen aber schon. Ellipsen haben
+// zwei Durchmesser: einen für die Breite und einen für die Höhe der
 // Ellipse. Sind beide Durchmesser gleich, ergibt sich ein Kreis.
 // Vier Kreise mit 100 Pixel Durchmesser
 ellipse(75, 70, 100, 100);
@@ -326,23 +326,23 @@ ellipse(75, 70, 100, 100);
 
 ## Testfall 3.1
 
-Wenn deine Ausgabe (Groesse, Abstand und Farbe) dem Bild auf der Vorgabe entspricht, hast du alles richtig gemacht.
+Wenn deine Ausgabe (Größe, Abstand und Farbe) dem Bild auf der Vorgabe entspricht, hast du alles richtig gemacht.
 
 ---
 
 # Datentypen und Variablen
 
 * Basis Baustein jeder Programmiersprache
-* Platzhalter fuer Daten
-* Logische Organisation durch verstaendliche Namen
-* Legen fest welche Art von Werten gueltig ist
-* Koennen selbst definiert werden
+* Platzhalter für Daten
+* Logische Organisation durch verständliche Namen
+* Legen fest welche Art von Werten gültig ist
+* Können selbst definiert werden
 
 ---
 
 ## Primitive Datentypen
 
-| Name    | Bezeichung | Beschreibung    | Groesse      | Beispiel |
+| Name    | Bezeichung | Beschreibung    | Größe      | Beispiel |
 | -----   | ---------- | ------------    | -------      | -------- |
 | int     | Integer    | Ganzzahl        | 4 Bytes      | 1,2,3    |
 | long    | Long       | Ganzzahl        | 8 Bytes      | 1,2,3    |
@@ -357,7 +357,7 @@ Wenn deine Ausgabe (Groesse, Abstand und Farbe) dem Bild auf der Vorgabe entspri
 ## Variablen
 
 * Haben immer einen Datentyp
-* Muessen definiert und deklariert werden
+* Müssen definiert und deklariert werden
 * Werte werden mit = zugewiesen
 
 ---
@@ -379,13 +379,13 @@ b = 22;
 
 ---
 
-# Uebung 3 (Refactoring)
+# Übung 3 (Refactoring)
 
-Ueberarbeite Aufgabe 3 und verwende Variablen fuer mehrfach verwendete Werte.
+Überarbeite Aufgabe 3 und verwende Variablen für mehrfach verwendete Werte.
 
 ---
 
-# Uebung 4
+# Übung 4
 
 ## Ghettoblaster
 
@@ -399,7 +399,7 @@ Zeichne den folgenden Ghettoblaster/Radio:
 
 Erstelle ein Programm, welches den Ghettoblaster mit den verschiedenen Basisfunktionen um Linien, Kreise, Rechtecke zu zeichnen, erstellt.
 
-Nutze Variablen fuer gleiche mehrfach verwendete Groessen.
+Nutze Variablen für gleiche mehrfach verwendete Größen.
 
 ---
 
@@ -413,7 +413,7 @@ Schaue dir in der Referenz die folgenden Funktionen an:
 - [strokeWeight()](https://processing.org/reference/strokeWeight_.html)
 - [strokeCap()](https://processing.org/reference/strokeCap_.html)
 
-Fortsetzung auf der naechsten Folie...
+Fortsetzung auf der nächsten Folie...
 
 ---
 
@@ -433,7 +433,7 @@ Die Fenster Koordianten haben ihren Nullpunkt immer oben links:
 
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe4_2.png)
 
-Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen und die Groessen festzulegen.
+Oftmals hilft es, sich das Bild vorher auf ein Blatt Papier aufzumalen und die Größen festzulegen.
 
 ---
 
@@ -447,9 +447,9 @@ Siehe Aufgabenstellung
 
 * Konvertieren von einem Datentyp in einen anderen
 * Casten von einem Float in einen Integer schneidet das Komma ab
-* Casten von einem String in einen Zahlentyp ist (ohne weiteres) nicht moeglich
+* Casten von einem String in einen Zahlentyp ist (ohne weiteres) nicht möglich
 * Explizites casten erflogt indem der Datentyp in Klammern vor die Variable geschrieben wird
-* Impliziertes casten moeglich, solange kein Datenverlust passiert (z.B. int -> float)
+* Impliziertes casten möglich, solange kein Datenverlust passiert (z.B. int -> float)
 
 ---
 
@@ -463,7 +463,7 @@ float c = a; // c entspricht jetzt der Zahl 5.0f
 c = c + 0.1;        // c entspricht jetzt der Zahl 5.1f
 int d = (int)c;     // d entspricht jetzt der Zahl 5
 
-// Einfaches runden auf eine Ganzzahl kann ueber casting erfolgen 
+// Einfaches runden auf eine Ganzzahl kann über casting erfolgen 
 // abrunden:
 float round_down = 5.3f;
 int rounded = (int)(round_down + 0.5f); // rounded entspricht jetzt der Zahl 5
@@ -502,13 +502,13 @@ println(richtiges_ergebnis);
 
 ---
 
-# Uebung 5
+# Übung 5
 
 Rechnen mit Variablen und Datentypen
 
 ## Aufgabenbescheibung 5.1
 
-Schreibe ein Programm, das die bei den Testfaellen stehenden Rechenaufgaben berechnet,
+Schreibe ein Programm, das die bei den Testfällen stehenden Rechenaufgaben berechnet,
 die Ergebnisse in einer Variablen speichert und die Werte der Variablen in der Konsole
 ausgibt.
 
@@ -539,27 +539,27 @@ ausgibt.
 
 ---
 
-# Uebung 6
+# Übung 6
 
 ## Stoffwechselrate berechnen
 
-Die Stoffwechselrate (Grundumsatz G) ist eine Goesse, die den Kalorienverbrauch (Energiemenge) eines Menschen pro Tag bestimmt.
-Diese Energiemenge wird benoetigt um den Koeper am Leben zu halten.
+Die Stoffwechselrate (Grundumsatz G) ist eine Göße, die den Kalorienverbrauch (Energiemenge) eines Menschen pro Tag bestimmt.
+Diese Energiemenge wird benötigt um den Köper am Leben zu halten.
 
 ---
 
 ## Aufgabenbeschreibung 6.1
 
-Schreibe ein Programm, welches den Grundumsatz (Stoffwechselrate) nach der Harris-Benedict-Formel berechnet und die Ergebnisse fuer beide Geschlechter in der Konsole ausgibt.
+Schreibe ein Programm, welches den Grundumsatz (Stoffwechselrate) nach der Harris-Benedict-Formel berechnet und die Ergebnisse für beide Geschlechter in der Konsole ausgibt.
 
 ```
-Fuer Maenner:
+Für Männer:
 G = 66.47+13.7*m +5*l-6.8*t
 
-Fuer Frauen:
+Für Frauen:
 G = 655.1+9.6*m +1.8*l-4.7*t
 
-l = Groesse in cm
+l = Größe in cm
 m = Gewicht in kg
 t = Alter in Jahren
 ```
@@ -569,8 +569,8 @@ t = Alter in Jahren
 ## Tipp 6.1
 
 Wenn du nicht weiter kommst, versuche folgendes:
-- Speichere die Eingabegroessen als Variablen
-- Berechne die Formeln fuer Mann und Frau in unterschiedlichen Variablen
+- Speichere die Eingabegrößen als Variablen
+- Berechne die Formeln für Mann und Frau in unterschiedlichen Variablen
 - Schreibe das Ergebnis in die Konsole
 - Achte auf den passenden Datentyp
 
@@ -578,21 +578,21 @@ Wenn du nicht weiter kommst, versuche folgendes:
 
 ## Testfall 6.1
 
-- Gewicht: 58kg, Goesse: 180cm, Alter: 25 Jahre -> Mann: 1591.07 Kalorien pro Tag, Frau: 1418.4 Kalorien pro Tag
-- Gewicht: 90kg, Goesse: 160cm, Alter: 45 Jahre -> Mann: 1793.47 Kalorien pro Tag, Frau: 1595.6 Kalorien pro Tag
-- Gewicht: 45kg, Goesse: 176cm, Alter: 17 Jahre -> Mann: 1447.37 Kalorien pro Tag, Frau: 1324.0 Kalorien pro Tag
+- Gewicht: 58kg, Größe: 180cm, Alter: 25 Jahre -> Mann: 1591.07 Kalorien pro Tag, Frau: 1418.4 Kalorien pro Tag
+- Gewicht: 90kg, Größe: 160cm, Alter: 45 Jahre -> Mann: 1793.47 Kalorien pro Tag, Frau: 1595.6 Kalorien pro Tag
+- Gewicht: 45kg, Größe: 176cm, Alter: 17 Jahre -> Mann: 1447.37 Kalorien pro Tag, Frau: 1324.0 Kalorien pro Tag
 
 ---
 
-# Uebung 7
+# Übung 7
 
 ## Baumstammvolumen berechnen
 
-Nachdem ein Baum gefaellt wurde, moechte der Schreiner wissen, wie viel Holz der Stamm hat. Dazu rechnen wir das Volumen mit der folgenden Formel aus:
+Nachdem ein Baum gefällt wurde, möchte der Schreiner wissen, wie viel Holz der Stamm hat. Dazu rechnen wir das Volumen mit der folgenden Formel aus:
 
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe7_1.png)
 
-Der Durchmesser (D) ist in Zentimeter und die Laenge (L) in Meter angegeben.
+Der Durchmesser (D) ist in Zentimeter und die Länge (L) in Meter angegeben.
 
 ---
 
@@ -604,7 +604,7 @@ Schreibe ein Programm, das nach der vorherigen Formel das Volumen eines Baumstam
 
 ## Tipp 7.1
 
-- Die Kreiszahl PI steht in Processing als Variable PI zur Verfuegung
+- Die Kreiszahl PI steht in Processing als Variable PI zur Verfügung
 
 ---
 
@@ -615,21 +615,21 @@ Schreibe ein Programm, das nach der vorherigen Formel das Volumen eines Baumstam
 
 ---
 
-# Uebung 8
+# Übung 8
 
-## Koerperoverflaeche
+## Körperoverfläche
 
-Die Koerperoberflaeche eines Menschen kann nach folgender Formel berechnet werden:
+Die Körperoberfläche eines Menschen kann nach folgender Formel berechnet werden:
 
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe8_1.png)
 
-In der Formel is die Koerpergroesse (h) in cm und das Koerpergewicht (w) in kg angegeben. Das Ergebnis ist die Oberflaeche in m^2. 
+In der Formel is die Körpergröße (h) in cm und das Körpergewicht (w) in kg angegeben. Das Ergebnis ist die Oberfläche in m^2. 
 
 ---
 
 ## Aufgabenbeschreibung 8.1
 
-Schreibe ein Programm, das die Koerperoberflaeche eines Menschen berechnet.
+Schreibe ein Programm, das die Körperoberfläche eines Menschen berechnet.
 
 ---
 
@@ -645,18 +645,18 @@ Schreibe ein Programm, das die Koerperoberflaeche eines Menschen berechnet.
 
 ---
 
-# Uebung 9
+# Übung 9
 
 ## RGB nach CMYK
 
-Farben beim Computer werden meit in RGB angegeben. Diese bescheiben den Anteil von Rot (R), Gruen (G) und Blau (B) im Zahlenbereich von 0 bis 255.
+Farben beim Computer werden meit in RGB angegeben. Diese bescheiben den Anteil von Rot (R), Grün (G) und Blau (B) im Zahlenbereich von 0 bis 255.
 Beim Drucken wird normalerweise das CMYK-Format verwendet. Dabei handelt es sich um die Farben Cyan (C), Magenta (M), Gelb/Yellow (Y) und Schwarz/Key (K) im Zahlenbereich zwischen 0 und 1.
 
 ---
 
 ## Aufgabenbeschreibung 9.1
 
-Schreibe ein Programm mit dem Farbwerte von RGB in CMYK mithilfe dieser Formeln umgewandelt werden koennen.
+Schreibe ein Programm mit dem Farbwerte von RGB in CMYK mithilfe dieser Formeln umgewandelt werden können.
 
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe9_1.png)
 
@@ -674,11 +674,11 @@ Schreibe ein Programm mit dem Farbwerte von RGB in CMYK mithilfe dieser Formeln 
 
 ---
 
-# Uebung 10
+# Übung 10
 
 ## Tic-Tac-Toe Spielfeld
 
-In einer spaeteren Aufgabe wollen wir das Spiel Tic-Tac-Toe programmieren. Dafuer wird ein Spielfeld mit 9 Feldern benoetigt.
+In einer späteren Aufgabe wollen wir das Spiel Tic-Tac-Toe programmieren. Dafür wird ein Spielfeld mit 9 Feldern benötigt.
 
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe10_1.png)
 
@@ -686,14 +686,14 @@ In einer spaeteren Aufgabe wollen wir das Spiel Tic-Tac-Toe programmieren. Dafue
 
 ## Aufgabenbeschreibung 10.1
 
-Schreibe ein Programm, welches ein leeres Spielfeld fuer Tic-Tac-Toe erzeugt und darstellt.
+Schreibe ein Programm, welches ein leeres Spielfeld für Tic-Tac-Toe erzeugt und darstellt.
 Mache dabei Gebrauch von eigenen Variablen.
 
 ---
 
 ## Tipp 10.1
 
-- Rechteck oder Linie zeichnen? Beides ist moeglich, aber ein Fall ist einfacher.
+- Rechteck oder Linie zeichnen? Beides ist möglich, aber ein Fall ist einfacher.
 - Speichere wiederholende Zahlenwerte in einer Variable.
 
 ---
@@ -707,7 +707,7 @@ Siehe Beschreibung.
 # Kontrollstrukturen
 
 * Ablauf im Programm steuern
-* Veraendern die Reihenfolge der ausgefuehrten Anweisungen
+* Verändern die Reihenfolge der ausgeführten Anweisungen
 * Bedingte Anweisung
 * Wiederholungsanweisung
 
@@ -733,7 +733,7 @@ Der [`else`-Block](https://processing.org/reference/else.html) ist optional.
 
 ### [If-Else Anweisung](https://processing.org/reference/if.html)
 
-Die Anweisungen koennen beliebig verschachtelt werden:
+Die Anweisungen können beliebig verschachtelt werden:
 
 ```java
 if(a == true) {
@@ -778,7 +778,7 @@ switch(<Ausdruck>) {
 ```
 
 Intern funktionieren Switch Anweisungen wie mehrere If-Else Anweisungen zusammen.
-Achtung `break` nicht vergessen! Ansonsten wird der naechste Block auch ausgefuehrt.
+Achtung `break` nicht vergessen! Ansonsten wird der nächste Block auch ausgeführt.
 
 ---
 
@@ -798,7 +798,7 @@ for(int i=1; i<10; i++) {
 
 ### [For-Loop](https://processing.org/reference/for.html)
 
-Auch Loops koennen verschachtelt werden:
+Auch Loops können verschachtelt werden:
 
 ```java
 for(int y = 0; y < 10; y++) {
@@ -821,9 +821,9 @@ while(i<10) {
     i++;
 }
 
-// Endlosschleife
+// Endloßchleife
 while(true) {
-    // Diese Schleife wird nie aufhoeren, ausser sie wird mit einem Break beendet
+    // Diese Schleife wird nie aufhören, außer sie wird mit einem Break beendet
 }
 
 ```
@@ -832,24 +832,24 @@ while(true) {
 
 ## Wiederholungsanweisung (Schleifen)
 
-### Vorzeitiges Beenden oder Ueberspringen
+### Vorzeitiges Beenden oder Überspringen
 
-- Das Keyword [`continue`](https://processing.org/reference/continue.html) beendet den aktuellen Loop-Durchlauf und prueft die Bedingung erneut.
-- Das Keyword [`break`](https://processing.org/reference/break.html) beendet den aktuellen Loop-Durchlauf ohne die Bedinung zu pruefen.
+- Das Keyword [`continue`](https://processing.org/reference/continue.html) beendet den aktuellen Loop-Durchlauf und prüft die Bedingung erneut.
+- Das Keyword [`break`](https://processing.org/reference/break.html) beendet den aktuellen Loop-Durchlauf ohne die Bedinung zu prüfen.
 
 ---
 
-# Uebung 11
+# Übung 11
 
 ## Maximum bestimmen
 
-Bestimme die groesste Zahl aus den vorliegenden Zahlen.
+Bestimme die größte Zahl aus den vorliegenden Zahlen.
 
 ---
 
 ## Aufgabenbeschreibung 11.1
 
-Bestimme das Maximum aus drei vorliegenden Integer-Zahlen mithilfe von `if-else`-Anweisungen. Nutze dafuer das Template auf der naechsten Folie.
+Bestimme das Maximum aus drei vorliegenden Integer-Zahlen mithilfe von `if-else`-Anweisungen. Nutze dafür das Template auf der nächsten Folie.
 
 ---
 
@@ -867,7 +867,7 @@ int maxi = -2147483648; // kleinste erlaubte Integer-Zahl
 
 // Ausgabe des Maximums in der Konsole
 println(
-    "Der groesste Wert in der Menge {" + a + ", " + b + ", " + c +
+    "Der größte Wert in der Menge {" + a + ", " + b + ", " + c +
     "} lautet: " + maxi
 );
 ```
@@ -876,7 +876,7 @@ println(
 
 ## Tipp 11.1
 
-- Wenn Variable a groesser ist als b und c, dann ist a das Maximum. Wenn b groesser ist als a und c, dann ist b das Maximum. Trifft beides nicht zu, dann kann nur c das Maximum sein.
+- Wenn Variable a größer ist als b und c, dann ist a das Maximum. Wenn b größer ist als a und c, dann ist b das Maximum. Trifft beides nicht zu, dann kann nur c das Maximum sein.
 
 ---
 
@@ -888,12 +888,12 @@ println(
 
 ---
 
-# Uebung 12
+# Übung 12
 
 ## Summe berechnen
 
 In dieser Aufgabe wollen wir die Summe von 24 aufeinanderfolgenden Zahlen berechnen.
-Mit einem Taschenrechner ist das ein sehr grosser Tippaufwand. Fuer den Computer kein Problem.
+Mit einem Taschenrechner ist das ein sehr großer Tippaufwand. Für den Computer kein Problem.
 
 ---
 
@@ -918,7 +918,7 @@ Schreibe ein Programm, das mit einer for-Schleife die Summe der Zahlen von 3 bis
 
 ---
 
-# Uebung 12
+# Übung 12
 
 ## Pin-Code Generator
 
@@ -935,8 +935,8 @@ Schreibe ein Programm, das die oben beschriebene Aufgabe umsetzt. Setze diese mi
 
 ## Tipp 12.1
 
-- Pruefe, ob die Zahl ein-, zwei-, oder dreistellig ist, und fuege gegebenenfalls voranstehende Nullen hinzu.
-- Da das Processing-Konsolenfenster maximal 500 Eintraege anzeigen kann, sind bei einem schnellen Prozessor eventuell nur die letzten 500 Eintraege sichtbar. Du kannst die Funktionalitaet aber ueberpruefen, indem du die Schleifenanweisung etwas langsamer ablaufen laesst. Der Processing-Befehl [delay(1)](https://processing.org/reference/delay_.html) fuegt beispielsweise eine Pause von einer Millisekunde in dein Programm ein.
+- Prüfe, ob die Zahl ein-, zwei-, oder dreistellig ist, und füge gegebenenfalls voranstehende Nullen hinzu.
+- Da das Processing-Konsolenfenster maximal 500 Einträge anzeigen kann, sind bei einem schnellen Prozessor eventuell nur die letzten 500 Einträge sichtbar. Du kannst die Funktionalität aber überprüfen, indem du die Schleifenanweisung etwas langsamer ablaufen lässt. Der Processing-Befehl [delay(1)](https://processing.org/reference/delay_.html) fügt beispielsweise eine Pause von einer Millisekunde in dein Programm ein.
 
 ---
 
@@ -966,9 +966,9 @@ Alle PINs sind vierstellig
 
 ---
 
-## Verknuepfte Bedingungen
+## Verknüpfte Bedingungen
 
-Manchmal ist es erforderlich in einer If-Anweisunge mehrere Ausdruecke zu pruefen. Das ist moeglich, indem man die Ausdrucke mit `&&` (und) oder `||` (oder) verknuepft.
+Manchmal ist es erforderlich in einer If-Anweisunge mehrere Ausdrücke zu prüfen. Das ist möglich, indem man die Ausdrucke mit `&&` (und) oder `||` (oder) verknüpft.
 
 <style scoped>
 pre {
@@ -981,7 +981,7 @@ pre {
 if(a == 3 && b == 8) {
     // ...
 }
-// Wenn a groesser 2 oder a kleiner 0:
+// Wenn a größer 2 oder a kleiner 0:
 if(a > 2 || a < 0) {
     // ...
 }
@@ -993,11 +993,11 @@ if(name == "" && b > 3 || a == 2) {
 
 ---
 
-# Uebung 13
+# Übung 13
 
 ## Radialer Farbverlauf
 
-Mit Bildbearbeitungssoftware wie z.B. Photoshop kann man Farbverlaeufe erstellen. In dieser Uebung wollen wir diese Funktionalitaet selbst programmieren
+Mit Bildbearbeitungssoftware wie z.B. Photoshop kann man Farbverläufe erstellen. In dieser Übung wollen wir diese Funktionalität selbst programmieren
 
 ---
 
@@ -1011,9 +1011,9 @@ Erstelle ein Programm was den folgenden Farbverlauf erstellt
 
 ## Tipp 13.1
 
-Erstelle einen weissen Kreis. Darauf werden nun weitere kleiner werdende Kreise, mit immer dunklerer Farbe gezeichnet.
+Erstelle einen weißen Kreis. Darauf werden nun weitere kleiner werdende Kreise, mit immer dunklerer Farbe gezeichnet.
 
-Achte darauf, dass der Kreis Radius nicht negativ wird. Denn dann wird der Kreis wieder groesser auf den Bildschirm gezeichnet.
+Achte darauf, dass der Kreis Radius nicht negativ wird. Denn dann wird der Kreis wieder größer auf den Bildschirm gezeichnet.
 
 ---
 
@@ -1023,7 +1023,7 @@ Siehe Aufgabenbeschreibung
 
 ---
 
-# Uebung 14
+# Übung 14
 
 ## Moderne Kunst
 
@@ -1031,8 +1031,8 @@ Moderne Kunst kann auch mit einem Computer erstellt werden.
 
 In diesem Fall ist wichtig:
 
-- Farben werden zufaellig generiert
-- Alle Vierecke sind gleich gross
+- Farben werden zufällig generiert
+- Alle Vierecke sind gleich groß
 - _Optional:_ Die Vierecke sind leicht gedreht
 
 ---
@@ -1047,7 +1047,7 @@ Erstelle ein Programm, welches das folgende Bild erstellt
 
 ## Tipp 14.1
 
-- Berechne die Anzahl der Felder anhand der Breite und Hoehe des Fensters und der gewuenschten Groesse der Felder
+- Berechne die Anzahl der Felder anhand der Breite und Höhe des Fensters und der gewünschten Größe der Felder
 - Benutze die Funktion [random](https://processing.org/reference/random_.html)
 
 ---
@@ -1058,17 +1058,17 @@ Siehe Aufgabenbeschreibung
 
 ---
 
-# Uebung 15
+# Übung 15
 
 ## Interaktiver Button
 
-Ein Butten veraendert in der Regel seine Farbe, wenn man mit der Maus darueber hovert. In dieser Uebung wollen wir einen solchen Button erstellen.
+Ein Butten verändert in der Regel seine Farbe, wenn man mit der Maus darüber hovert. In dieser Übung wollen wir einen solchen Button erstellen.
 
 ---
 
 ## Aufgabenbeschreibung 15.1
 
-Erstelle ein Programm, was ein blauen Button zeichnet. Wenn die Maus sich darueber befindet soll der Button die Farbe auf gruen aendern.
+Erstelle ein Programm, was ein blauen Button zeichnet. Wenn die Maus sich darüber befindet soll der Button die Farbe auf grün ändern.
 Die `x`- und `y`-Koordinaten der Maus kann man mit den Variablen `mouseX` und `mouseY` herausfinden.
 
 <style>
@@ -1114,8 +1114,8 @@ void draw() {
 
 ## Tipp 15.2
 
-- Es ist sinnvoll, die Eigenschaften des Rechtecks als Variablen zu speichern. Diese wirst du bei den Kontrollen der Mausposition haeufig benoetigen.
-- Dies sind die moeglichen Maus Positionen, die abgefragt werden muessen:
+- Es ist sinnvoll, die Eigenschaften des Rechtecks als Variablen zu speichern. Diese wirst du bei den Kontrollen der Mausposition häufig benötigen.
+- Dies sind die möglichen Maus Positionen, die abgefragt werden müssen:
 
 <style>
 img[alt~="right"] {
@@ -1152,17 +1152,17 @@ img[alt~="middle"] {
 
 # Funktionen
 
-* Vermeidung von wiederholenden Code Bloecken
-* Sammlung von Anweisungen innerhalb von `{}` (Bloecken)
+* Vermeidung von wiederholenden Code Blöcken
+* Sammlung von Anweisungen innerhalb von `{}` (Blöcken)
 * Haben immer eine Definition und einen Namen
 * Separierung von Code, der mehrfach aufgerufen werden kann
-* Macht Code uebersichtlich und leicht zu aendern (muss nur an einer Stelle geaendert werden)
+* Macht Code übersichtlich und leicht zu ändern (muss nur an einer Stelle geändert werden)
 
 ---
 
 ## Syntax (Signatur der Funktion)
 
-- Rueckgabetyp (wenn nichts zurueck gegeben wird, `void` verwenden)
+- Rückgabetyp (wenn nichts zurück gegeben wird, `void` verwenden)
 - Funktionsnamen (sollte beschreiben, was die Funktion macht)
 - Parameterliste (Keine oder mehrere Variablen durch Komma getrennt)
 - Anweisungsblock
@@ -1192,8 +1192,8 @@ int summe = BerechneSumme(15, 39);
 
 | Global | Lokal |
 | ------ | ----- |
-| Ueberall im Programm verwendbar | Nur im aktuellen Block verwendbar |
-| Ausserhalb eines Blocks definiert und deklariert | Innerhalb eines Blocks definiert und deklariert |
+| Überall im Programm verwendbar | Nur im aktuellen Block verwendbar |
+| Außerhalb eines Blocks definiert und deklariert | Innerhalb eines Blocks definiert und deklariert |
 | Name kann nur 1x definiert werden | Name kann in jedem Block neu definiert und verwendet werden |
 
 ---
@@ -1220,16 +1220,16 @@ void setup() {
 
 ## Processing Einstiegspunkt
 
-Da wir jetzt mit Funktionen arbeiten benoetigt Processing einen Einstiegspunkt, bei dem der Programmablauf startet.
+Da wir jetzt mit Funktionen arbeiten benötigt Processing einen Einstiegspunkt, bei dem der Programmablauf startet.
 Dieser ist in Processing die [`void setup()`](https://processing.org/reference/setup_.html)-Funktion.
 
-Eine weitere Funktion, die direkt nach der `setup`-Funktion aufgerufen wird ist die [`void draw()`](https://processing.org/reference/draw_.html)-Funktion. Diese wird periodisch fuer jeden Frame aufgerufen.
+Eine weitere Funktion, die direkt nach der `setup`-Funktion aufgerufen wird ist die [`void draw()`](https://processing.org/reference/draw_.html)-Funktion. Diese wird periodisch für jeden Frame aufgerufen.
 
 ---
 
 ### Beispiel
 
-Unsere Programme muessen somit jetzt immer mindestens diese 2 Funktionen enthalten
+Unsere Programme müssen somit jetzt immer mindestens diese 2 Funktionen enthalten
 
 ```java
 void setup() {
@@ -1243,29 +1243,29 @@ void draw() {
 
 ---
 
-# Uebung 16
+# Übung 16
 
-Beliebiges Programm erstellen, welches 2 Funktionen enthaelt und aufruft.
+Beliebiges Programm erstellen, welches 2 Funktionen enthält und aufruft.
 
 ---
 
 ## Aufgabenbeschreibung 16.1
 
-Erstelle alleine oder mit einem Partner ein kleines Programm, welches mindestens 2 Funktionen (zusaetzlich zu `setup` und `draw`) mit
-unterschiedlichen Parametern oder Rueckgabewerten enthaelt.
+Erstelle alleine oder mit einem Partner ein kleines Programm, welches mindestens 2 Funktionen (zusätzlich zu `setup` und `draw`) mit
+unterschiedlichen Parametern oder Rückgabewerten enthält.
 
-Stelle dein Programm deinen Mitschuelern vor.
+Stelle dein Programm deinen Mitschülern vor.
 
 ---
 
-# Uebung 17
+# Übung 17
 
-## Fakultaet berechnen
+## Fakultät berechnen
 
-Berechne die Fakultaet einer vorgegeben Zahl. Die Fakultaet berechnet man, indem man alle Zahlen von 1 bis n multipliziert.
+Berechne die Fakultät einer vorgegeben Zahl. Die Fakultät berechnet man, indem man alle Zahlen von 1 bis n multipliziert.
 
 Beispiel:
-Fakultaet n=4 ->  `1 * 2 * 3 * 4 = 24`
+Fakultät n=4 ->  `1 * 2 * 3 * 4 = 24`
 
 ---
 
@@ -1273,9 +1273,9 @@ Fakultaet n=4 ->  `1 * 2 * 3 * 4 = 24`
 
 ```java
 int factorial(int n) {
-  // Diese Funktion soll die Fakultaet von n berechnen.
+  // Diese Funktion soll die Fakultät von n berechnen.
   // Die Fakultat von 6 berechnet man z.B. mit 1*2*3*4*5*6.
-  // Die Variable n gibt vor wie oft die oben genannte Multiplikation durchgefuehrt wird.
+  // Die Variable n gibt vor wie oft die oben genannte Multiplikation durchgeführt wird.
 }
 
 void setup() {
@@ -1296,26 +1296,26 @@ void setup() {
 
 ---
 
-# Uebung 18 
+# Übung 18 
 
-## Schaltjahr Pruefung
+## Schaltjahr Prüfung
 
-Bei Schaltjahren hat der Februar 29 Tage anstatt der ueblichen 28 Tage.
-Schaltjahre können wir dadurch bestimmen, wenn die Jahreszahl durch 4 teilbar ist. Allerdings darf die Jahreszahl zusaetzlich nicht durch 100 teilbar sein. 
+Bei Schaltjahren hat der Februar 29 Tage anstatt der üblichen 28 Tage.
+Schaltjahre können wir dadurch bestimmen, wenn die Jahreszahl durch 4 teilbar ist. Allerdings darf die Jahreszahl zusätzlich nicht durch 100 teilbar sein. 
 Wenn die Jahreszahl wiederum durch 400 teilbar ist, ist es doch ein Schaltjahr.
 
 ---
 
 ## Aufgabenbeschreibung 18.1
 
-Schreibe eine Funktion, die ueberprueft, ob es sich bei einer uebergebenen Jahreszahl um ein Schaltjahr handelt. Sollte das Jahr ein Schaltjahr sein, wird true zurueckgegeben. Sollte dies nicht der Fall sein, wird false zurueckgegeben.
+Schreibe eine Funktion, die überprüft, ob es sich bei einer übergebenen Jahreszahl um ein Schaltjahr handelt. Sollte das Jahr ein Schaltjahr sein, wird true zurückgegeben. Sollte dies nicht der Fall sein, wird false zurückgegeben.
 
 ---
 
 ## Tipp 18.1
 
-- Probiere, die Ablaeufe in der Funktion testweise auszugeben. Wird zum Beispiel bei einer entsprechenden Jahreszahl die erwartete Stelle im Quellcode ausgefuehrt? Sollte dies nicht der Fall sein, scheint es einen (Denk-)Fehler im Quellcode zu geben.
-- Teilbarkeit in Zahlen laesst sich mit dem Modulo-Operator (%) pruefen, welcher den Rest einer Division zurueckgibt.
+- Probiere, die Abläufe in der Funktion testweise auszugeben. Wird zum Beispiel bei einer entsprechenden Jahreszahl die erwartete Stelle im Quellcode ausgeführt? Sollte dies nicht der Fall sein, scheint es einen (Denk-)Fehler im Quellcode zu geben.
+- Teilbarkeit in Zahlen lässt sich mit dem Modulo-Operator (%) prüfen, welcher den Rest einer Division zurückgibt.
 
 ---
 
@@ -1348,33 +1348,33 @@ void setup() {
 
 ---
 
-# Uebung 19
+# Übung 19
 
 ## Literzahlen umwandeln
 
-Bei dieser Uebung wollen wir uns das umrechnen von Groessen vereinfachen.
+Bei dieser Übung wollen wir uns das umrechnen von Größen vereinfachen.
 
 ---
 
 ## Aufgabenbeschreibung 19.1
 
-Schreibe eine Funktion mit Namen volumeConverter, die eine als float-Wert uebergebene Literzahl umwandelt und als String zurueckgibt.
+Schreibe eine Funktion mit Namen volumeConverter, die eine als float-Wert übergebene Literzahl umwandelt und als String zurückgibt.
 
 | float-Wert | Erzeugter String |
 | ---------- | ---------------- |
-| 1.0 und groesser | <vol> l |
-| 0.1 und groesser | <vol> cl |
-| 0.001 und groesser | <vol> ml |
+| 1.0 und größer | <vol> l |
+| 0.1 und größer | <vol> cl |
+| 0.001 und größer | <vol> ml |
 | kleiner als 0.001 | Number too small!| 
 
 ---
 
 ## Tipp 19.1
 
-- Wenn du die Kommazahlen entfernt haben moechtest, probiere doch eine Umwandlung zu Integer-Werten.
-- Natuerlich musst du bei Divisionen auch aufpassen, dass nicht der Kommawert zu frueh abgeschnitten wird.
-- Float-Werte muessen in Java immer mit einem nachstehenden f definiert werden. Beispiel: 0.01f.
-- Strings können mit einem + verknuepft werden, z.B. `"abc" + "def" -> "abcdef" oder "abc" + 123 -> "abc123"` 
+- Wenn du die Kommazahlen entfernt haben möchtest, probiere doch eine Umwandlung zu Integer-Werten.
+- Natürlich musst du bei Divisionen auch aufpassen, dass nicht der Kommawert zu früh abgeschnitten wird.
+- Float-Werte müssen in Java immer mit einem nachstehenden f definiert werden. Beispiel: 0.01f.
+- Strings können mit einem + verknüpft werden, z.B. `"abc" + "def" -> "abcdef" oder "abc" + 123 -> "abc123"` 
 
 ---
 
