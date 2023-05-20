@@ -1385,3 +1385,50 @@ Schreibe eine Funktion mit Namen volumeConverter, die eine als float-Wert überg
 - vol = 0.003 → 3 ml
 
 ---
+
+# Uebung 20 (Zusatz Aufgabe)
+
+## Sportwetten
+
+Bei Fußballwettspielen werden die erzielten Wettpunkte nach folgenden Regeln ermittelt:
+
+-> nächste Folie
+
+---
+
+Exakter Tipp (3 Punkte):
+- Sieg (z.B. Ergebnis: 3:2, Tipp: 3:2)
+- Niederlage (z.B. Ergebnis: 0:1, Tipp: 0:1)
+- Unentschieden (z.B. Ergebnis: 2:2, Tipp: 2:2)
+
+Richtige Tendenz (1 Punkt):
+- Sieg (z.B. Ergebnis: 3:2, Tipp: 2:1)
+- Niederlage (z.B. Ergebnis: 0:1, Tipp: 1:2)
+- Unentschieden (z.B. Ergebnis: 2:2, Tipp: 1:1)
+
+Sonst 0 Punkte
+
+---
+
+## Aufgabenbeschreibung 20.1
+
+Schreibe eine Funktion mit Namen computeBetScore, die für ein Fußballwettspiel die
+erzielten Punkte berechnet. Die Funktion soll das getippte Ergebnis und das tatsächlich
+erzielte Ergebnis des Fußballspiels übergeben bekommen.
+
+Schreibe anschließend eine Funktion mit Namen computeCompleteBetScore, die die vorherige Funktion verwendet, um die Gesamtpunktzahl aller Wettergebnisse für eine Person zu
+berechnen.
+
+---
+
+## Testfall 20.1
+
+| Ergebnis Heim | Ergebnis Gast | Tipp Heim | Tipp Gast |
+| ------------- | ------------- | --------- | --------- |
+| 3 | 2 | 3 | 2 |
+| 1 | 1 | 1 | 0 |
+| 2 | 2 | 1 | 1 |
+
+Das Ergebnis dieser Wetten sollte 4 sein (3 + 0 + 1)
+
+---
