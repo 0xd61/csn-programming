@@ -1470,6 +1470,12 @@ Schreibe ein Programm, was die Wurfparabel für die Anfangsgeschwindigkeit v0 un
 
 Für die Berechnung kannst du diese Hilfe verwenden
 
+<style scoped>
+pre {
+   font-size: 0.8rem;
+}
+</style>
+
 ```java
   // Umwandlung von Grad in Radians
   beta = radians(beta);
@@ -1496,27 +1502,27 @@ Für die Berechnung kannst du diese Hilfe verwenden
 <style>
 img[alt~="right"] {
   position: absolute;
-  top: 460px;
+  top: 200px;
   right: 100px;
-  width: 250px;
+  width: 350px;
 }
 </style>
 
 <style>
 img[alt~="left"] {
   position: absolute;
-  top: 430px;
+  top: 200px;
   left: 100px;
-  width: 250px;
+  width: 340px;
 }
 </style>
 
 <style>
 img[alt~="middle"] {
   position: absolute;
-  top: 430px;
-  left: 500px;
-  width: 250px;
+  top: 200px;
+  left: 465px;
+  width: 350px;
 }
 </style>
 
