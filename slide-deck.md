@@ -1432,3 +1432,71 @@ berechnen.
 Das Ergebnis dieser Wetten sollte 4 sein (3 + 0 + 1)
 
 ---
+
+## Übung 21
+
+## Wurfparabel
+
+Computerspiele basieren in der Regel auf physikalischen Gesetzen. Häufig verwendet wird da die Wurfparabel. Sie beschreibt die Flugban eines geschossenen oder geworfenen Objekts.
+
+---
+
+- Konstanten:
+  – Fallbeschleunigung: g =9, 81
+- Startwerte:
+  – Geschwindigkeit: v0
+  – Winkel: β
+- Berechnung:
+  – x(t) = v0 ∗ t ∗ cos(β)
+  – y(t) = v0 ∗ t ∗ sin(β)−g/2 * t
+
+---
+
+## Aufgabenbeschreibung 21.1
+
+Schreibe ein Programm, was die Wurfparabel für die Anfangsgeschwindigkeit v0 und einem Winkel β im Ausgabefenster darstellt.
+
+---
+
+## Tipp 21.1
+
+- Winkel ausgeben (wird Cosinus/Sinus in Radians oder Grad berechnet?)
+- Erst einmal mit verschiedenen Werten t testen. Wann bleibt y oberhalb von 0?
+- Oben links ist beim Zeichenbereich in Processing bei y=0.
+
+---
+
+## Testfall 21.1
+
+<style>
+img[alt~="right"] {
+  position: absolute;
+  top: 460px;
+  right: 100px;
+  width: 250px;
+}
+</style>
+
+<style>
+img[alt~="left"] {
+  position: absolute;
+  top: 430px;
+  left: 100px;
+  width: 250px;
+}
+</style>
+
+<style>
+img[alt~="middle"] {
+  position: absolute;
+  top: 430px;
+  left: 500px;
+  width: 250px;
+}
+</style>
+
+![left](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe21_1.png)
+![middle](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe21_2.png)
+![right](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe21_3.png)
+
+---
