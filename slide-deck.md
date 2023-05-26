@@ -1466,6 +1466,31 @@ Schreibe ein Programm, was die Wurfparabel für die Anfangsgeschwindigkeit v0 un
 
 ---
 
+## Tipp 21.2
+
+Für die Berechnung kannst du diese Hilfe verwenden
+
+```java
+  // Umwandlung von Grad in Radians
+  beta = radians(beta);
+
+  // Berechne und zeichne in einer Skalierung von 0.25
+  for (float t = 0.0; t < 20.0; t = t + 0.25) {
+    // Startpunkt für Zeichnung ist Fensterhöhe = unterer Rand
+    int yStart = height;
+
+    // Berechne Werte für x und y
+    // HIER MÜSSEN DIE FORMELN ERGÄNZT WERDEN:
+    // ...
+
+    // Zeichne Parabelpunkte
+    // y muss horizontal gedreht werden (s. Hinweise)
+    ellipse(x, -y + yStart, 2, 2);
+  }
+```
+
+---
+
 ## Testfall 21.1
 
 <style>
