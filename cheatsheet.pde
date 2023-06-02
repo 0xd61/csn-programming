@@ -78,7 +78,7 @@ void setup() {
     //            und das Ergebnis von addiere_kommazahlen gleich 15.0 ist
     //            oder die Variable zahl nicht den Wert 6 hat,
     //            dann wird der Block ausgeführt.
-    if ((zahl_ist_groesser_zwei(erstes_ergebnis) && addiere_kommazahlen(4.2, 7.5, 3.3) == 15.0) || zahl != 6) {
+    if ((zahl_ist_groesser_zwei(erstes_ergebnis) && addiere_kommazahlen(4.2, 7.5, 3.3) == 15.0) || zahl_ist_durch_sieben_teilbar(zahl)) {
         println("Bedingung wurde erfüllt!");
 
         // If Abfragen können auch verschachtelt werden. Wichtig: Die der Block der "inneren" Abfrage muss vor dem
@@ -171,5 +171,14 @@ float addiere_kommazahlen(float erste, float zweite, float dritte) {
 
 boolean zahl_ist_groesser_zwei(int zahl) {
     boolean ergebnis = zahl > 2;
+    return ergebnis;
+}
+
+boolean zahl_ist_durch_sieben_teilbar(int zahl) {
+    // Der Modulo Operator (%) gibt den Rest einer Division aus.
+    // Um zu schauen, ob eine Zahl durch 7 teilbar ist, können wir 
+    // überprüfen, ob der Rest von der angegebenen Zahl/7, 0 ergibt.
+    // Ist das der Fall, ist die Zahl durch 7 teilbar.
+    boolean ergebnis = zahl % 7 == 0;
     return ergebnis;
 }
