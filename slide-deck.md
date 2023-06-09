@@ -1683,7 +1683,7 @@ void draw() {
   fill(0);
   // Textgröße setzen
   textSize(20);
-  // zeichne Variablenangaben
+  // zeichne Variablenangaben (Speed, Winkel)
 
 
   // Auf Kollision prüfen
