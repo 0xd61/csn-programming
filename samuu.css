@@ -1,0 +1,21 @@
+/**
+ * gaia-16-9 theme is based on Gaia theme, but 4:3 slide cannot use.
+ *
+ * @theme samuu
+ * @auto-scaling fittingHeader,math  false
+ */
+
+@import 'gaia';
+
+pre {
+  display: block;
+  margin: 1em 0 0;
+}
+
+section {
+  overflow: auto;
+}
+
+section::after {
+  position: fixed;
+}

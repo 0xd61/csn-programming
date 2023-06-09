@@ -1,5 +1,5 @@
 ---
-theme: gaia
+theme: samuu
 _class: lead
 paginate: true
 transition: fade
@@ -10,6 +10,7 @@ backgroundImage: url('https://www.samuu.srl/logo.svg')
 title: CSN Programming
 description: Colegio Segundario Neuland Programming Course
 author: Daniel Glinka
+auto-scaling: false
 style: |
   :root {
     --color-background: #fff;
@@ -1531,3 +1532,178 @@ img[alt~="middle"] {
 ![right](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe21_3.png)
 
 ---
+
+# Übung 22
+
+## Bogenschießen
+
+Wie schon in der Aufgabe 5.2.15 zur Wurfparabel erwähnt, basieren so gut wie alle Computerspiele auf physikalischen Gesetzen. Mit der Wurfparabel wollen wir nun ein eigenes Computerspiel programmieren: das Bogenschießspiel.
+Bogenschießen ist seit langer Zeit eine olympische Disziplin. Hierbei wird mit einem Bogen ein Pfeil auf eine Zielscheibe geschossen, die in einiger Distanz vom Schützen entfernt steht. Ziel dabei ist, möglichst die Mitte der Zielscheibe zu treffen.
+
+---
+
+Um den generellen Ablauf eines Computerspiels zu verstehen, hier ein paar Anmerkungen: 
+Computerspiele werden mit einer Art Endlosschleife (Game-Loop) realisiert, bei der in jedem Schleifendurchlauf jeweils ein neues Bild in das Ausgabefenster gezeichnet wird. Bevor
+in das Ausgabefenster gezeichnet wird, werden jeweils die Positionen aller Gegenstände in der Schleife gegebenenfalls aktualisiert. Dort kann zum Beispiel eine Positionsänderung passieren, wenn der Spieler eine Taste drückt oder physikalische Gesetze in einem Zeitrahmen greifen.
+
+---
+
+Beispiel-Pseudocode:
+```
+Für jeden Schleifendurchlauf:
+reagiere auf Tastaturanfragen
+aktualisiere Variablen/Positionen der Gegenstände
+zeichne Bild in Abhängigkeit der Variablen
+```
+
+---
+
+## Aufgabenbeschreibung 22.1
+
+Programmiere ein Bogenschießspiel.
+Der Pfeil, bzw. der Bogen sollen dabei auf der Tastatur in Geschwindigkeit und Winkel angepasst werden können. Die Platzierung der Zielscheibe soll bei jedem Spieldurchlauf zufällig gewählt werden. Der Bogenschütze soll immer an der gleichen Stelle stehen.
+
+Schreibe als Erstes die einzelnen Schritte als Text (z.B. als Kommentar).
+
+---
+
+## Testfall 22.1
+
+Der Code ist ausführbar und es kann gespielt werden
+
+---
+
+## Aufgabenbeschreibung 22.2
+
+### Grundgerüst
+
+Erstelle ein grobes Grundgerüst des Programms. Überlege dir welche Funktionen du benötigen wirst.
+
+---
+
+## Tipp 22.2
+
+```java
+
+// Konstanten
+float g = 9.81;
+// y-Position an dem die Wiese beginnt
+// y-Position an dem der Boden beginnt
+
+// Pfeilstartposition
+// Pfeil Startposition (x,y)
+
+// Ziel
+// Ziel Breite + Höhe
+
+
+// Globale Variablen setzen
+// Geschwindigkeit
+// Winkel
+// Aktuelle Pfeilposition
+// Pfeil Winkel
+// Pfeil wurde abgeschossen?
+// Flugzeit
+// Ziel Position
+
+// Funktion zum (Re-)Initialisieren von globalen Variablen
+// Benötigt keinen Eingabewert und gibt auch keinen Wert
+// zurück
+
+
+// Funktion zur Ausgabe von Koordinaten der Wurfparabel zum
+// angeforderten Zeitpunkt.
+// An die Funktion wird die Geschwindigkeit als Integer-Wert
+// sowie der Winkel und den Zeitpunkt je als Fließkommazahl
+// gegeben.
+// NOTE: Erstmal überspringen
+
+// Funktion zur Berechnung des Steigungswinkels des Pfeils
+// (1. Ableitung) als Fließkommazahl zurück
+// NOTE: Erstmal überspringen
+
+
+// Funktion, die die Reaktion auf Tastatureingaben
+// verarbeitet. Der keyCode ist in einer globalen
+// Variable enthalten.
+void keyPressed() {
+   // TODO: Auf Tastendrücke reagieren und
+   // einen Beispieltext auf der Konsole ausgaben
+}
+
+// Funktion zum Erhöhen der Geschwindigkeit ohne
+// Ein- oder Ausgabeparameter
+
+
+// Funktion zum Verringern der Geschwindigkeit ohne
+// Ein- oder Ausgabeparameter
+
+
+// Funktion zum Erhöhen des Winkels ohne
+// Ein- oder Ausgabeparameter
+
+
+// Funktion zum Verringern der Winkels ohne
+// Ein- oder Ausgabeparameter
+
+
+// Funktion zum Aktualisieren der Pfeilposition
+// Keine Ein- oder Ausgabeparameter, da die Funktion
+// auf den globalen Variablen rechnet.
+// NOTE: Erstmal überspringen
+
+
+// Funktion zur simplen Kollisionserkennung
+// ohne Ein- und Ausgabeparameter
+// NOTE: Erstmal überspringen
+
+
+// Funktion zur Bestimmung, ob die aktuelle Koordinate
+// im Kollisionsbereich liegt
+// NOTE: Erstmal überspringen
+
+
+// Startpunkt des Hauptprogramms
+// Hier wird die implementierte Funktion zu Demonstrations- und
+// Testzwecken aufgerufen.
+void setup() {
+  size(1200, 600);
+  // reset();
+}
+
+
+// Funktion, die immer wieder zum (Neu-)Zeichnen des
+// Bildschirminhalts aufgerufen wird
+void draw() {
+  // zunächst Löschen des Bildschirms
+  clear();
+  // Hintergrundfarbe setzen
+  background(255);
+  // mit gesetzter Farbe füllen
+  fill(0);
+  // Textgröße setzen
+  textSize(20);
+  // zeichne Variablenangaben
+
+
+  // Auf Kollision prüfen
+  // NOTE: Erstmal überspringen
+
+  // Pfeil aktualisieren
+  // NOTE: Erstmal überspringen
+
+  // Zeichne Wiese
+
+
+  // Zeichne Boden
+
+
+  // Zeichne Zielscheibe
+
+
+  // Zeichne Pfeil
+  // NOTE: Erstmal überspringen
+}
+
+```
+

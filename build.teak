@@ -31,11 +31,11 @@ void Start() {
     
     Log("Building slides");
     if (mode == "") {
-       assert SystemShellExecute("%baseCommand% %user% %container% %type% -I . -o %outputDir%");
+       assert SystemShellExecute("%baseCommand% %user% %container% %type% --theme-set samuu.css -I . -o %outputDir%");
     } else if (mode == "server") {
-        assert SystemShellExecute("%baseCommand% %user% -p 8080:8080 -p 37717:37717 %container% %type% -I . -o %outputDir% -s .");
+        assert SystemShellExecute("%baseCommand% %user% -p 8080:8080 -p 37717:37717 %container% %type% --theme-set samuu.css -I . -o %outputDir% -s .");
     } else if (mode == "watch") {
-       assert SystemShellExecute("%baseCommand% %user% %container% %type% -I . -o %outputDir% -w");        
+       assert SystemShellExecute("%baseCommand% %user% %container% %type% --theme-set samuu.css -I . -o %outputDir% -w");        
     } else if (mode == "build") {
        assert SystemShellExecute("docker build -t %container% .");
     }
