@@ -1707,3 +1707,62 @@ void draw() {
 
 ```
 
+---
+
+## Aufgabenbeschreibung 22.3
+
+Implementiere die `keyPressed`-Funktion.
+- Linke Pfeiltaste soll die Geschwindigkeit erhöhen
+- Rechte Pfeiltaste soll die Geschwindigkeit verringern
+- Oben Pfeiltaste soll den Winkel erhöhen
+- Unten Pfeiltaste soll den Winkel verringern
+- r-Taste soll alles auf den Ausgangszustand zurücksetzen
+- Enter soll den Pfeil abschießen
+
+---
+
+## Testfall 22.3
+- Bei jedem der Tastendrücke soll erstmal nur ein Infotext über die Aktion mit `println` ausgeführt werden. Somit kann man überprüfen, ob die richtigen Aktionen durgeführt werden
+- Für jede Aktion soll eine Funktion erstellt werden, die den Infotext auf der Konsole ausgibt
+- Nutze dazu die Hilfskommentare im Tipp der Aufgabe 22.2
+
+---
+
+## Tipp 22.3
+
+- Sondertasten (Pfeiltasten und Enter) können mit der Variable `keyCode` abgefragt werden
+- Enter hat den `keyCode` 10
+
+---
+
+## Aufgabenbeschreibung 22.4
+
+Erstelle globale Variablen für
+- AbschussWinkel
+- Geschwindigkeit
+- Pfeil AbschussPosition X und Y
+- Pfeil Position X und Y
+- Pfeil Winkel
+- Pfeil Flugzeit
+- Ziel Position und Größe
+
+---
+
+Anschließend ersetzte die `println`-Ausgaben der Funktionen der vorherigen Aufgabe und passe die Variablen entsprechend der auszuführenden Aktion an.
+Ergänze danach die Draw Funktion, sodass die aktuelle Geschwindigkeit und der aktuelle Winkel oben links im Bildschirm angezeigt werden.
+
+---
+
+## Testfall 22.4
+
+- Beim Tastendruck einer Pfeiltaste erhöht oder verringert sich der Winkel oder die Geschwindigkeit
+- Die Änderung ist im Fenster sichtbar
+
+---
+
+## Tipp 22.4
+
+- Zum Anzeigen kannst du die Funktion [`text`](https://processing.org/reference/text_.html) verwenden
+- Die Textgröße kann mit [`textSize`](https://processing.org/reference/textSize_.html) geändert werden
+
+---
