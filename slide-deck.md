@@ -1690,7 +1690,6 @@ void draw() {
   // NOTE: Erstmal überspringen
 
   // Pfeil aktualisieren
-  // NOTE: Erstmal überspringen
 
   // Zeichne Wiese
 
@@ -1766,3 +1765,59 @@ Ergänze danach die Draw Funktion, sodass die aktuelle Geschwindigkeit und der a
 - Die Textgröße kann mit [`textSize`](https://processing.org/reference/textSize_.html) geändert werden
 
 ---
+
+## Aufgabenbeschreibung 22.5
+
+Zeichne das Ziel, den Boden, die Wiese und den Pfeil.
+Erstelle eine Funktion reset, die alle Werte auf ihren Ursprung zurück setzt und initialisiert.
+Die X-Position des Ziels soll zufällig in der rechten Hälfte des Fensters sein.
+Die Reset Funktion wird ausgeführt, wenn die r-Taste gedrückt wird.
+
+---
+
+## Testfall 22.5
+
+Die Elemente werden im Fenster angezeigt und reagieren auf Veränderung, z.B. des Abschusswinkels oder durch Drücken der r-Taste.
+
+---
+
+## Tipp 22.5
+
+- Für die zufällige Position kann die Funktion [random(min, max)](https://processing.org/reference/random_.html) verwendet werden.
+- Die Position des Pfeils entspricht der Pfeil Spitze. Um den Pfeil als Linie zu zeichnen wird eine Endposition benötigt. Diese kann mithilfe des Winkels und sin() und cos() berechnet werden. Du kannst dazu den Begriff "Einheitskreis" googlen.
+
+---
+
+## Aufgabenbeschreibung 22.6
+
+- Erstelle eine globale Variable, die anzeigt, ob der Pfeil sich aktuell bewegt oder nicht.
+- Beim drücken der Enter Taste soll der Pfeil anfangen, sich zu bewegen.
+- Erstelle eine Funktion updateArrow() mit welcher die Pfeilposition aktualisiert wird.
+  - Es wird abgefragt, ob sich der Pfeil aktuell bewegt
+  - Wenn der Pfeil sich bewegt wird eine Funktion updateTrajectory() aufgerufen, welche die X und Y Position des Pfeils aktualisiert
+    - updateTrajectory werden Geschwindigkeit, Winkel und Zeit als Parameter übergeben.
+    - Es kann die Berechung aus Aufgabe 21 verwendet werden. 
+  - Nach updateTrajectory() wird eine Funktion getDegrees() ausgeführt, wodurch der Flugwinkel des Pfeils angepasst wird.
+  - Nach dem aktualisieren des Pfeils soll die Flugzeit um 0.1 erhöht werden.
+
+---
+
+## Testfall 22.6
+
+Nach Abschuss des Pfeils durch die Enter Taste fliegt der Pfeil einen Bogen.
+
+---
+
+## Tipp 22.6
+
+Du kannst folgende Funktion für getDegrees() verwenden.
+
+```java
+float getDegrees(int v0, float beta, float t) {
+  beta = radians(beta);
+  float x1 = v0 * cos(beta);
+  float y1 = v0 * sin(beta) - g * t;
+  float winkel = atan(y1 / x1);
+  return degrees(winkel);
+}
+```
