@@ -1650,17 +1650,14 @@ void keyPressed() {
 // Funktion zum Aktualisieren der Pfeilposition
 // Keine Ein- oder Ausgabeparameter, da die Funktion
 // auf den globalen Variablen rechnet.
-// NOTE: Erstmal überspringen
 
 
 // Funktion zur simplen Kollisionserkennung
 // ohne Ein- und Ausgabeparameter
-// NOTE: Erstmal überspringen
 
 
 // Funktion zur Bestimmung, ob die aktuelle Koordinate
 // im Kollisionsbereich liegt
-// NOTE: Erstmal überspringen
 
 
 // Startpunkt des Hauptprogramms
@@ -1821,3 +1818,22 @@ float getDegrees(int v0, float beta, float t) {
   return degrees(winkel);
 }
 ```
+
+---
+
+## Aufgabenbeschreibung 22.7
+
+- Erstelle eine Funktion zur Kollisionserkennung.
+- Es wird die Position des Pfeils mit dem Ziel und dem Boden verglichen.
+- Wenn eine Kollision mit dem Boden oder dem Ziel erkannt wird, wird die Variable, ob sich der Pfeil bewegt auf false gesetzt, sodass der Pfeil gestoppt wird.
+- Die Funktion zur Kollisionsprüfung wird in der `draw`-Funktion vor dem Aktualisieren der Pfeilposition aufgerufen.
+
+---
+
+## Testfall 22.7
+
+Landet der Pfeil im Ziel oder auf dem Boden wird er gestoppt und bewegt sich nicht mehr weiter.
+
+Herzlichen Glückwunsch. Das Programm ist nun komplett.
+
+---
