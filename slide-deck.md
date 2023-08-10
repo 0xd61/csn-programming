@@ -1837,3 +1837,39 @@ Landet der Pfeil im Ziel oder auf dem Boden wird er gestoppt und bewegt sich nic
 Herzlichen Glückwunsch. Das Programm ist nun komplett.
 
 ---
+
+## Aufgabenbeschreibung 22.8
+### Erweiterung
+
+- Ersetze die Linien und Rechtecke durch richtige Bilder.
+- Bilder können mit der `loadImage`-Funktion geladen werden. Mit der `image`-Funktion werden die Bilder dann angezeigt. Im Tipp ist ein Beispiel dafür.
+- Die Bild Dateien müssen sich im gleichen Verzeichnis, wie das Programm auf dem Computer befinden, damit diese gefunden werden.
+- Verwende Bilder ohne Hintergrund (PNG Dateien)
+
+---
+
+## Tipp 22.8
+
+Bild Beispiel:
+
+```java
+PImage bild;
+
+void setup() {
+  size(1200, 600);
+  bild = loadImage("gespeichertes_bild.png");
+}
+
+void draw() {
+  // Bild Variable, X, Y, Breite, Höhe
+  image(bild, 200, 100, 500, 200);
+}
+```
+
+---
+
+## Testfall 22.8
+
+Für Pfeil, Ziel und Wiese werden Bilder angezeigt und animiert.
+
+---
