@@ -1873,3 +1873,117 @@ void draw() {
 Für Pfeil, Ziel und Wiese werden Bilder angezeigt und animiert.
 
 ---
+
+# Listen (Arrays)
+
+Problem:
+- Nur ein Wert pro Variable
+- Bei Funktionen kann nur 1 Wert zurückgegeben werden
+- Für zusammenhängende Werte müssten viele einzelne Variablen erstellt werden
+
+Lösung:
+* Mit Arrays können mehrere Werte eines Datentyps in einer Variable gespeichert werden
+* Es wird nur 1 Variablen Name verwendet
+* Über ein Index kann auf einen einzelnen Wert in der Liste zugegriffen werden
+  - Index wird über [] angegeben
+  - `koordinatenFarbwert[3] = farbWert;`
+  - `farbWert = koordinatenFarbwert[5];`
+---
+
+## Initialisierung
+
+Die Erstellung von Array Variablen ist etwas ungewöhnlich
+
+```java
+int[] koordinatenFarbwert = new int[anzahlElemente];
+```
+
+`int[]`- sagt, dass wir einen Listendatentyp für Integer Werte haben möchten. `new int[anzahl]`- erzeugt eine Liste für eine angegebene Anzahl mit Standard Werten. Das ist die maximale Anzahl an Elementen. Mehr Elemente können nicht gespeichert werden.
+
+Alternativ können auch direkt Werte festgelegt werden. Dann entfällt die Zuweisung mit dem `new`.
+
+```java
+String[] farben = {"rot", "gelb", "grün"};
+```
+
+---
+
+## Index
+
+Als Index können Zahlen oder auch Integer Variablen angegeben werden. Das erleichtert die Abfrage in z.B. Schleifen
+
+```java
+for(int index = 0; index < anzahlPixel; index++) {
+    koordinatenFarbwert[index] = initialerFarbWert;
+}
+```
+
+Der Index beginnt immer mit 0 für das erste Element. Somit ist der Index des letzten Elements um 1 kleiner als die Array Größe.
+
+```java
+// Index:            0      1       2
+String[] farben = {"rot", "gelb", "grün"};
+
+String letzteFarbe = farben[2];
+```
+
+---
+
+# Übung 23
+
+## Wochentag
+
+Berechne den Wochentag von einem bestimmten Datum
+
+---
+
+## Aufgabenbeschreibung 23.1
+
+Den Wochentag eines Datums können wir mit folgender Vorschrift berechnen (Beispiel für
+den 13.11.2013):
+- Nehme die letzten zwei Ziffern der Jahreszahl und addiere den ganzzahligen Anteil eines Viertels davon hinzu.
+`Beispiel: 2013 → 13 + 13/4 = 13 + 3 = 16`
+- Addiere folgende Werte entsprechend des Monats:
+  - Januar: 1
+  - Februar: 4
+  - März: 4
+  - April: 0
+  - Mai: 2
+  - Juni: 5
+  - Juli: 0
+  - August: 3
+  - September: 6
+  - Oktober: 1
+  - November: 4
+  - Dezember: 6
+`Beispiel: November → 4 + 16 = 20`
+- Addiere den Tag:
+`Beispiel: 13 → 13 + 20 = 33`
+- Addiere folgende Zahl für das Jahrhundert:
+  - 18xx: 2 
+  - 19xx: 0 
+  - 20xx: 6 
+  - 21xx: 4
+`Beispiel: 2013 → 6 + 33 = 39`
+- Wenn das Jahr ein Schaltjahr ist, subtrahiere für Januar oder Februar den Wert mit 1.
+`Beispiel: 2013 ist kein Schaltjahr.`
+- Reduziere den Wert mit Modulo 7. Damit kann auf den Wochentag im folgenden Array zurückgegriffen werden: `{ Sa, So, Mo, Di, Mi, Do, Fr }`
+`Beispiel: 39 % 7 = 4 → Mittwoch`
+
+---
+
+## Tipp 23.1
+
+- Die Additionswerte oder die Namen der Wochentage können in einem Array gespeichert werden.
+- Das übergebene Datum sollte nur aus Zahlen bestehen (z.B. drei Variablen für Tag, Monat und Jahr)
+
+---
+
+## Testfall 23.1
+
+- 3.2.2016 → Mittwoch
+- 3.11.2016 → Donnerstag
+- 1.11.2017 → Mittwoch
+- 1.1.1917 → Montag
+
+---
