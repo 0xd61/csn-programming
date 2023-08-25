@@ -1979,11 +1979,158 @@ den 13.11.2013):
 
 ---
 
+## Tipp 23.2
+
+Du kannst diese Vorlage nutzen:
+
+```java
+// Funktion zur Berechnung des Wochentags
+// Erhält als Eingabeparameter ganzzahlige Werte für
+// den Tag, den Montag und das Jahr
+String calcDayOfWeek(int inputDay, int inputMonth, int inputYear) {
+  
+  float year = float(inputYear) / 100.0;
+  int yearFirst = int(year);
+  int yearSecond = int((year - float(yearFirst)) * 100.0f);
+  
+  int dayOfWeek = yearSecond;
+  
+  // Ganzzahligen Anteil eines Viertels zu dayOfWeek hinzuaddieren
+  // Das Ergebnis einer Division mit Integer-Zahlen liefert
+  // den ganzzahligen Wert der Division.
+  // TODO:...
+
+  // Zuweisung Additionswerte für Monat
+  // Werte entsprechend des Monats addieren
+  // TODO:...
+
+  // Tag addieren
+  // TODO:...
+  
+  // Zuweisung Jahrzehnt zu Offset
+  int centuryAdd = 0;
+  int century = yearFirst;
+  if(century == 18) {
+    centuryAdd = 2;
+  }
+  if(century == 19) {
+    centuryAdd = 0;
+  }
+  if(century == 20) {
+    centuryAdd = 6;
+  }
+  if(century == 21) {
+    centuryAdd = 4;
+  }
+
+  // Addiere Offset
+  dayOfWeek = dayOfWeek + centuryAdd;
+  // Bei Schaltjahr wird für Januar und Februar 1 subtrahiert
+  if (checkLeapYear(inputYear)) {
+    if (inputMonth == 1 || inputMonth == 2) { // Monat = 1 oder 2?
+      dayOfWeek = dayOfWeek - 1;
+    }
+  }
+  
+  // Wochentag ergibt sich aus Reduzieren Modulo 7
+  // TODO:...
+  
+  // Array mit Wochentagen
+  // TODO:...
+  // Gebe Wochentag aus
+  
+  return "Wochentag aus Array zurückgeben";
+}
+// Funktion zur Schaltjahrprüfung (aus vorheriger Aufgabe)
+boolean checkLeapYear(int yearInput) {
+  // Ist Jahreszahl durch 400 teilbar?
+  if (yearInput % 400 == 0) {
+    return true;
+  } else { // sonst prüfe,
+    // ob Jahreszahl durch 4, aber nicht durch 100 teilbar ist
+    if ((yearInput % 4 == 0) && (yearInput % 100 != 0)) {
+      return true;
+    }
+  }
+  // Wenn keine Bedingung zutrifft
+  return false;
+}
+// Startpunkt des Hauptprogramms
+// Hier wird die implementierte Funktion zu Demonstrations- und
+// Testzwecken aufgerufen.
+void setup() {
+  String day = calcDayOfWeek(1, 1, 1817);
+  println(day);
+}
+```
+
+---
+
 ## Testfall 23.1
 
 - 3.2.2016 → Mittwoch
 - 3.11.2016 → Donnerstag
 - 1.11.2017 → Mittwoch
 - 1.1.1917 → Montag
+
+---
+
+# Übung 24
+
+## Tankfüllung
+
+Wir wollen den Durchschnitt berechnen, wie viele Kilometer wir mit einer Tankfüllung fahren können.
+
+---
+
+## Aufgabenbeschreibung 24.1
+
+Schreibe eine Funktion, die ein Array mit verschiedenen int-Werten übergeben bekommt und daraus die durchschnittliche Anzahl an Kilometern zurückgibt, die wir mit einer Tankfüllung fahren können.
+
+---
+
+## Tipp 24.1
+
+- Summiere alle Kilometer
+- Berechne den Mittelwert
+- Das Ergebnis ist eine Kommazahl
+
+---
+
+## Testfall 24.1
+
+[123, 134, 120, 122] → 124.75
+
+--- 
+
+# Übung 25
+
+## Rückwärtsausgabe
+
+Wir wollen eine Funktion schreiben, mit der Wörter rückwärts ausgegeben werden.
+
+---
+
+## Aufgabenbeschreibung 25.1
+
+Schreibe eine Funktion, die ein char-Array übergeben bekommt und dieses rückwärts in der Konsole ausgibt.
+
+---
+
+## Tipp 25.1
+
+- Du kannst eine For-Schleife auch von hinten nach vorne durchgeben und den index immer um 1 verringern.
+
+---
+
+## Testfall 25.1
+
+Beispielpalindrome:
+- Anna
+- Reib nie ein Bier
+- Eine Horde bedrohe nie
+Weitere Testdaten:
+- Hallo → ollaH
+- Informatik → kitmarofn
 
 ---
