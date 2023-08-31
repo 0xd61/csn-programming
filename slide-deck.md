@@ -2134,3 +2134,31 @@ Weitere Testdaten:
 - Informatik → kitmarofn
 
 ---
+
+# Übung 26
+
+## Bildvergrößerung
+
+Digitale Bilder sind durch sogenannte Pixel dargestellt. Jedes Pixel beschreibt einen Farbton an einer bestimmten Stelle. Vereinfacht kann man sich das wie ein großes Array vorstellen, in denen verschiedene Zahlen (die Farbwerte) gespeichert sind.
+
+In dieser Aufgabe werden wir ein Bild aus zwei Farben zeichnen. Eine typische Anwendung in Bildbearbeitungssoftware ist die Vergrößerung. Diese wollen wir hier programmieren.
+
+---
+
+## Aufgabenbeschreibung 26.1
+
+Schreibe eine Funktion `magnify` die ein zweidimensionales Array um den ganzzahligen Faktor `f` vergrößert. Die Werte für `f` sind größer als 1. Das Bild (Array ist quadratisch, also hat die gleiche Anzahl von Zeilen und Spalten).
+
+---
+
+## Tipp 26.1
+
+- Zeichne dir die Vergrößerung einmal auf einem Blatt Papier auf. Es könnte dir deutlich machen, welche Werte vom Eingangsbild an welche Position im Ausgangsbild kommen.
+
+---
+
+## Testfall 26.1
+
+![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe26_1.png)
+
+---
