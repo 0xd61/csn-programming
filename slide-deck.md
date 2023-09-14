@@ -2135,6 +2135,39 @@ Weitere Testdaten:
 
 ---
 
+# Mehrdimensionale Arrays
+
+- Ein eindimensionales Array ist eine Liste von Werten in "eine Richtung"
+- Ein zweidimensionales Array ist eine Liste in "zwei Richtungen" wie z.B. bei einer Tabelle oder einem Schachbrett
+- Um ein Feld anzusprechen brauchen wir 2 Koordinaten, die Zeile und die Spalte
+- Mehrdimensionale Arrays sind Listen in Listen
+
+---
+
+## Beispiel
+
+```java
+int[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };
+
+// oder in Tabellenform
+int[][] myArray = {  {0, 1, 2, 3},
+                     {3, 2, 1, 0},
+                     {3, 5, 6, 1},
+                     {3, 8, 3, 4}  };
+                     
+// Wert in Zeile 2 und Spalte 3
+int wert = myArray[2][3];
+
+// Um durch jedes Feld zu loopen werden 2 verschachtelte Schleifen benötigt
+for(int zeile = 0; zeile < myArray.length; zeile++) {
+    println("Zeile: "+ zeile);
+    for(int spalte = 0; spalte < myArray[0].length; spalte++) {
+        println("Spalte: "+ spalte);
+    }
+}
+```
+
+---
 # Übung 26
 
 ## Bildvergrößerung
@@ -2154,6 +2187,79 @@ Schreibe eine Funktion `magnify` die ein zweidimensionales Array um den ganzzahl
 ## Tipp 26.1
 
 - Zeichne dir die Vergrößerung einmal auf einem Blatt Papier auf. Es könnte dir deutlich machen, welche Werte vom Eingangsbild an welche Position im Ausgangsbild kommen.
+- Für die Vergrößerung brauchst du 4 verschachtelte For-Loops
+
+---
+
+## Tipp 26.2
+
+```java
+// Funktion zum Vergrößern eines quadratisches Arrays um den Faktor f
+// Eingabe ist ein zweidimensionales Array mit boolean-Werten sowie
+// der Faktor, um den das Array vergrößert werden soll
+boolean[][] magnify(boolean[][] input, int f) {
+  // die aktuelle Größe entspricht der Anzahl an Array-Elementen
+  // einer Dimension
+  int inputSize = input.length;
+
+  // Berechnen der Ergebnisgröße des Arrays
+  TODO: ...
+
+  // Generiere leeren Output-Array in der neuen Größe
+  TODO: ...
+
+  // Gehe jedes Element in Input durch und schreibe es in die skalierten
+  // Felder im Output
+  TODO: ...
+
+  return output;
+}
+
+// Funktion, die das Array grafisch im Ausgabefenster darstellt
+// Als Eingabe erfolgt das Array.
+void drawArray(boolean[][] input) {
+  // Array-Größe. Da Array quadratisch sein soll, reicht die Höhe
+  // des Arrays aus
+  int inputSize = input.length;
+
+  // Höhe und Breite jedes Rechtecks (definiert durch Fenstergröße)
+  int rectWidth = width / inputSize;
+  int rectHeight = height / inputSize;
+
+  for (int y = 0; y < inputSize; y++) {
+    for (int x = 0; x < inputSize; x++) {
+      // Setze Farbe nach Array-Inhalt
+      // Um einzelne Elemente sichtbar zu machen, ist die Linienfarbe
+      // stets das Gegenteil der Füllfarbe
+      if (input[y][x] == false) {
+        stroke(0);
+        fill(255);
+      }
+      else {
+        stroke(255);
+        fill(0);
+      }
+      // Zeichne Rechteck
+      // startX,startY: Obere linke Ecke des Rechtecks
+      // startX+rectWidth, startY+rectHeight: Untere linke Ecke
+      // des Rechtecks
+      int startX = x * rectWidth;
+      int startY = y * rectHeight;
+      rect(startX, startY, startX + rectWidth, startY + rectHeight);
+    }
+  }
+}
+
+// Startpunkt des Hauptprogramms
+// Hier wird die implementierte Funktion zu Demonstrations- und
+// Testzwecken aufgerufen.
+void setup() {
+  size(200, 200);
+  background(255);
+  boolean[][] eingabe = {{true, false}, {false, false}};
+  drawArray(magnify(eingabe, 1));
+}
+```
 
 ---
 
