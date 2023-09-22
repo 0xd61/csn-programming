@@ -2268,3 +2268,32 @@ void setup() {
 ![w:300 center](https://raw.githubusercontent.com/0xd61/csn-programming/main/assets/aufgabe26_1.png)
 
 ---
+
+# Übung 27
+
+## Platztausch
+
+Beim Programmieren muss man oftmals die Reihenfolge der Elemente im Array ändern.
+
+---
+
+## Aufgabenbeschreibung 27.1
+
+Wir wollen eine Funktion schreiben, die die Reihenfolge der Array-Einträge umdreht. Die Elemente „lesen“ sich dann also von rechts nach links, verglichen mit den ursprünglichen Positionen.
+Die Funktion soll dabei so implementiert werden, ohne dass ein zweites Array erzeugt wird, in dem das Ergebnis abgelegt wird.
+
+---
+
+## Tipp 27.1
+
+- Welcher Platz muss mit welchem getauscht werden?
+- Testausgaben zu den getauschten Plätzen könnten hilfreich sein.
+
+---
+
+## Testfall 27.1
+
+- [0, 1, 2, 3, 4, 5, 6] → [6, 5, 4, 3, 2, 1, 0]
+- [0, 1, 2, 3, 4, 5] → [5, 4, 3, 2, 1, 0]
+
+---
