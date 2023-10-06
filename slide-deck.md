@@ -2297,3 +2297,38 @@ Die Funktion soll dabei so implementiert werden, ohne dass ein zweites Array erz
 - [0, 1, 2, 3, 4, 5] → [5, 4, 3, 2, 1, 0]
 
 ---
+
+# Übung 28
+
+## Lauf Animation
+
+Filme oder Animationen sind nichts anderes als bewegte Bilder. In dieser Übung wollen wir eine solche Animation erstellen.
+
+---
+
+## Aufgabenbeschreibung 28.1
+
+Schreibe ein Programm, dass sechs Bilddateien einliest und diese kontinuierlich der
+Reihe nach und immer an der gleichen Position im Ausgabefenster darstellt.
+Die Bilddateien kannst du hier herunterladen:
+
+[Download](https://github.com/0xd61/csn-programming/tree/main/assets/laufanimation)
+
+---
+
+## Tipp 28.1
+
+- Es macht Sinn, alle Bilder nur einmal einzulesen und danach diese zum passenden Zeitpunkt abzurufen.
+- Processing stellt einen eigenen Datentyp für Bilder zur Verfügung: PImage.
+- Arrays können über beliebige Datentypen definiert werden, insbesondere auch mit PImage.
+- Zum Einlesen und Anzeigen von Bilddaten existieren spezielle Funktionen in Processing.
+
+---
+
+## Testfall 28.1
+
+- Animation ist ruckelfrei.
+- Animation läuft realistisch und nicht zu schnell ab (12 Bilder pro Sekunde).
+
+---
+
