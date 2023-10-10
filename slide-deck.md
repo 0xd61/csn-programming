@@ -2332,3 +2332,67 @@ Die Bilddateien kannst du hier herunterladen:
 
 ---
 
+# Strings (Zeichenketten)
+
+* Stringverarbeitung ist wichtig. Z.B. muss in unseren Programmen Text (Strings) in Code umgewandelt werden. Dabei wird jedes Zeichen analysiert, die Befehle erkannt und daraus Maschinencode generiert.
+* Stehen immer zwischen ".
+* Ist eine Liste von einzelnen Zeichen (Charactern).
+* Unterstützt Zusatzfunktionen, damit er verwendet werden kann, wie eine Liste.
+* Können gesplitted und zusammgefügt werden.
+
+---
+
+## Beispiel
+
+```java
+String text = "Ich will Kekse!";
+for(int i=0; i<text.length; i++) {
+    print(text.charAt(i));
+}
+```
+
+```java
+String str1 = "CCCP"; 
+String str2 = "Rabbit"; 
+String ss1 = str1.substring(2);     // Returns "CP"
+String ss2 = str2.substring(3);     // Returns "bit"
+String ss3 = str2.substring(0, 2);  // Returns "Ra"
+println(ss1 + ":" + ss2 + ":" + ss3);  // Prints "CP:bit:Ra"
+```
+
+---
+
+# Übung 29
+
+## Kompression von Strings
+
+Kompression ist ein wichtiger Teil unserer digitalen Welt. Es wird versucht überall nur die notwendigsten Daten zu speichern, um den Speicher so gering wie möglich zu halten.
+In dieser Übung wollen wir Texte selbst komprimieren.
+
+---
+
+## Aufgabenbeschreibung 29.1
+
+Der Aufbau der zu komprimierenden Strings ist dabei sehr besonders, da diese nur aus den Zeichen 'W' und 'B' bestehen.
+Das Kompressionsverfahren zählt alle aufeinanderfolgenden gleichen Zeichen. Anschließend ersetzt es diese durch die numerische Anzahl, gefolgt vom gezählten Zeichen. Beispiele stehen in den Testfällen.
+
+Schreibe einen Stringkompressionsalgorithmus nach dem oben beschriebenen Schema.
+
+---
+
+## Tipp 29.1
+
+- Konstruiere einen leeren String, der die Kompression enthalten soll.
+- Bestimme das Zeichen, das als Nächstes gezählt werden soll.
+- Zähle die Anzahl der gleichen Zeichen.
+- Sollte das vorherige Zeichen anders als das aktuelle Zeichen sein, muss etwas geschehen.
+
+---
+
+## Testfall 29.1
+
+- "WWWWBBBWBBBBBBWW" -> "4W3B1W6B2W"
+- "BBBBWWWWWWWWWB" -> "4B9W1B"
+- "WBBBBWWWWWWB" -> "1W4B6W1B
+
+---
