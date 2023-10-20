@@ -2346,7 +2346,7 @@ Die Bilddateien kannst du hier herunterladen:
 
 ```java
 String text = "Ich will Kekse!";
-for(int i=0; i<text.length; i++) {
+for(int i=0; i<text.length(); i++) {
     print(text.charAt(i));
 }
 ```
@@ -2394,5 +2394,118 @@ Schreibe einen Stringkompressionsalgorithmus nach dem oben beschriebenen Schema.
 - "WWWWBBBWBBBBBBWW" -> "4W3B1W6B2W"
 - "BBBBWWWWWWWWWB" -> "4B9W1B"
 - "WBBBBWWWWWWB" -> "1W4B6W1B
+
+---
+
+# Übung 30
+
+## Split Funktion
+
+In der Software Entwicklung hat man oft einen Text, der in verschiedene Segmente aufgeteilt werden muss. Dafür verwendet man eine Split-Funktion.
+In dieser Übung wollen wir selbst eine Split Funktion erstellen.
+
+---
+
+## Aufgabenbeschreibung 30.1
+
+Schreibe eine Funktion mit Namen split, welche die vorher genannten Anforderungen
+erfüllt. Als Trenner soll das Semikolon (;) verwendet werden.
+Zur Lösung der Aufgabe soll dabei nicht die integrierte split()-Funktion verwendet wer-
+den. ;-)
+
+---
+
+## Tipp 30.1
+
+- Gehe jedes Zeichen einzeln durch.
+- Sofern dieses kein Semikolon ist, kann dieses Zeichen einem String angefügt werden.
+- Bei einem Semikolon wird ein neues Element im Array angelegt.
+
+---
+
+## Testfall 30.1
+
+"ab;cde;fghi;jklm" -> ["ab", "cde", "fghi", "jklm"]
+
+---
+
+# Eigene Datentypen (Class/Struct)
+
+- Mit Klassen können eigene Datentypen definiert werden
+- Die eigenen Datentypen sind immer eine Gruppe von vorhandenen Datentypen
+- Meist werden Klassen verwendet um Werte/Variablen zu gruppieren
+- Klassen können auch Funktionen beinhalten, welche den Datentypen zur Verfügung stehen
+- In anderen Programmiersprachen werden Structs verwendet. Structs sind wie Klassen, jedoch ohne Funktionen
+- Klassen haben einen Konstruktur der beim Erstellen der Klasse (new) aufgerufen wird.
+
+---
+
+## Beispiel 1
+
+Gruppierung von Variablen durch Klasse, analog zu Structs
+
+```java
+class Circle {
+    public float x;
+    public float y;
+    public float radius;
+}
+
+
+Circle c = new Circle();
+c.x = 20;
+c.y = 22;
+c.radius = 45;
+
+
+```
+
+## Beispiel 2
+
+Komplettes Beispiel einer Klasse mit Konstruktor und Klassen Funktionen.
+
+```java
+// Hier werden 2 Objekte der Klasse HLine erstellt und konstruiert 
+HLine h1 = new HLine(20, 2.0); 
+HLine h2 = new HLine(50, 2.5); 
+ 
+void setup() 
+{
+  size(200, 200);
+  frameRate(30);
+}
+
+void draw() { 
+  background(204);
+  h1.update(); 
+  h2.update();
+} 
+ 
+class HLine { 
+  // Klassen Variablen
+  float ypos, speed; 
+  
+  // Konstruktor
+  HLine (float y, float s) {
+    ypos = y; 
+    speed = s; 
+  }
+  
+  // Klassen Funktion
+  void update() { 
+    ypos += speed; 
+    if (ypos > height) { 
+      ypos = 0; 
+    } 
+    line(0, ypos, width, ypos); 
+  } 
+} 
+```
+
+---
+
+Klassen werden in der Objekt Orientierten Programmierung verwendet, welche wir hier nicht weiter vertiefen wollen. Weitere Infos erhälst du in der Processing Referenz.
+
+Für uns ist die Gruppierung von Werten wichtig.
 
 ---
